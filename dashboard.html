@@ -52,19 +52,30 @@
     <h2>Today's Cravings</h2>
     <p>Log Any Cravings You Have Today</p>
     <form action="/submit-cravings" method="Post">
-        <label for="input-cravings">What foods are you craving today?</label>
-        <input type="text" id="input-cravings", name="cravings", placeholder="Chocolate, Chips, etc.">
-        <label for="scale">How strong is your craving? (1-10)</label>
-        <input type="number" id="scale" name="scale" min="1" max="10">
+        <div class="group-form">
+            <label for="input-cravings">What foods are you craving today?</label>
+            <input type="text" id="input-cravings", name="cravings", placeholder="Chocolate, Chips, etc.">
 
-        <label for="time">What time of day do you experience these cravings</label>
-        <select id="time" name="time of day">
-            <option value="mornings">Mornings</option>
-            <option value="afternons">Afternoons</option>
-            <option value="evenings">Evenings</option>
-            <option value="nights">Nights</option>
-        </select>
-        <button type="cravings-button">Log Cravings</button>
+        </div>
+        <div class="group-form">
+            <label for="scale">How strong is your craving? (1-10)</label>
+            <input type="number" id="scale" name="scale" min="1" max="10">
+
+        </div>
+        <div class="group-form">
+            <label for="time">What time of day do you experience these cravings</label>
+            <select id="time" name="time of day">
+                <option value="mornings">Mornings</option>
+                <option value="afternons">Afternoons</option>
+                <option value="evenings">Evenings</option>
+                <option value="nights">Nights</option>
+            </select>
+
+        </div>
+        <div class="group-form">
+            <button type="submit">Log Cravings</button>
+
+        </div>
     </form>
 </section>
 
