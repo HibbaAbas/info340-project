@@ -3,9 +3,49 @@
 .button-mood {
     cursor: pointer;
     border: none;
+    font-size: 1rem;
+    padding: 1rem;
 }
 
 .button-mood img {
     width: 50px;
     height: 50px;
 }
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #fff0f5;
+    /* color: #333; */
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+nav {
+    border-radius:10px;
+    background: #ffccd5;
+    padding: 10px 15px;
+
+}
+
+
+header h1 {
+    text-align:center;
+}
+
+
+section {
+    border-radius:10px;
+    margin-top:1rem;
+
+
+}
+
+
+nav a:hover {
+    color:#800080;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
