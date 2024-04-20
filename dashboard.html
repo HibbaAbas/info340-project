@@ -31,6 +31,14 @@
 <section id="predictions">
     <h2>Period Predictions</h2>
     <p>Your period will likely start on April 11th</p>
+    <!-- Maybe add link to input of new period -->
+
+    <p>Based on your cycle, you may be experiencing some anxiety today. It is not uncommon to experience this before a period. To learn more about this, read <a href="https://www.calm.com/blog/anxiety-before-period#:~:text=PMS%20anxiety%20typically%20begins%20in,subsides%20once%20your%20period%20starts." target="_blank">this article about causes of period anxiety</a></p>
+    
+
+    <p>You May also be craving salty foods. To learn more about this, read <a href="https://www.healthline.com/health/period-cravings#chocolate" target="_blank">this article about period cravings</a></p>
+    <!-- Add link to learn more about period cravings -->
+</section>
 
 </section>
 <section id="mood-trackers">
@@ -42,9 +50,27 @@
         <button class="button-mood" onclick="selectMood('neutral')"><img src="img/neutralface.png" alt="Neutral Face"></button>
         
     </div>
-    <p>You may be feeling Anxious today</p>
 
+</section>
 
+<section id="cravings-tracker">
+    <h2>Today's Cravings</h2>
+    <p>Log Any Cravings You Have Today</p>
+    <form action="/submit-cravings" method="Post">
+        <label for="input-cravings">What foods are you craving today?</label>
+        <input type="text" id="input-cravings", name="cravings", placeholder="Chocolate, Chips, etc.">
+        <label for="scale">How strong is your craving? (1-10)</label>
+        <input type="number" id="scale" name="scale" min="1" max="10">
+
+        <label for="time">What time of day do you experience these cravings</label>
+        <select id="time" name="time of day">
+            <option value="mornings">Mornings</option>
+            <option value="afternons">Afternoons</option>
+            <option value="evenings">Evenings</option>
+            <option value="nights">Nights</option>
+        </select>
+        <button type="cravings-button">Log Cravings</button>
+    </form>
 </section>
 
 </body>
@@ -52,3 +78,6 @@
   <p>Group Members: Anjali Schatzer, Yusra Abdullahi, Hiba Abbas</p>
 </footer>
 </html>
+
+
+<!-- ADD IMAGE CITATIONS -->
