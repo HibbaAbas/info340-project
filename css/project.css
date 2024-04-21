@@ -14,33 +14,6 @@ h1, h2, h3 {
     margin: 0.5rem;
 }
 
-.button-mood {
-    cursor: pointer;
-    border: none;
-    font-size: 1rem;
-    padding: 1rem;
-}
-
-.button-mood img {
-    width: 50px;
-    height: 50px;
-}
-.mood-image {
-    width: 50px;
-    height: 50px;
-    padding: .5em;
-}
-.mood-image:hover {
-    transform: scale(1.2);
-}
-.mood-options {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-
 nav {
     display:flex;
     flex-direction:column;
@@ -49,7 +22,6 @@ nav {
     padding: 10px 15px;
 
 }
-
 
 nav a:hover, a:hover {
     color:#800080;
@@ -80,8 +52,34 @@ section {
     border-radius:10px;
     margin-top:1rem;
     display:block
+}
 
+/* mood tracker styling */
+.button-mood {
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    padding: 1rem;
+}
 
+.button-mood img {
+    width: 50px;
+    height: 50px;
+}
+.mood-image {
+    width: 50px;
+    height: 50px;
+    padding: .5em;
+}
+.mood-image:hover {
+    transform: scale(1.2);
+}
+.mood-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 /* reminders styling */
@@ -108,6 +106,10 @@ section {
 }
 
 /* calendar styling */
+/* table wrapper to make it scrollable on smaller screens */
+.table-wrapper {
+    overflow-x: auto;
+}
 #calendar {
     border-radius: 5%;
     overflow: hidden;
