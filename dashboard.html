@@ -3,66 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Group 5">
+    <!-- <meta name="description" content="Empowering Menstrual Health Tracking: an inclusive, free web application to help people understand and track their periods. This site will allow users to utilize advanced tracking features, personalized insights, and professional advice without the burden of a subscription."> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/project.css">
     <title>User Dashboard</title>
-    <style>
-        /* Additional CSS for image icons */
-        .mood.options a {
-            text-decoration: none;
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        .mood.options img {
-            width: 50px; /* Adjust the width to your desired size */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 50%; /* Make the images round */
-            transition: transform 0.3s ease; /* Add a smooth transition effect */
-        }
-
-        .mood.options img:hover {
-            transform: scale(1.1); /* Increase size on hover */
-        }
-    </style>
 </head>
 <body>
     <nav>
         <!-- Add Other Navigation Pages -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-        </ul>
-    </nav>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
 
-    <section>
-        <header>
-            <h1>User Dashboard For Menstrual Health Tracking</h1>
-        </header>
-    </section>
 
-    <section id="mood-trackers">
-        <h2>Hello! How are you feeling today?</h2>
-        <div class="mood options">
-            <a href="#" onclick="selectMood('happy')"><img src="img/happyface.png" alt="Happy Face"></a>
-            <a href="#" onclick="selectMood('sad')"><img src="img/sadface.png" alt="Sad Face"></a>
-            <a href="#" onclick="selectMood('angry')"><img src="img/angryface.png" alt="Angry Face"></a>
-            <a href="#" onclick="selectMood('neutral')"><img src="img/neutralface.png" alt="Neutral Face"></a>
+
+      </nav>
+<section>
+  <header>
+    <h1>User Dashboard For Menstrual Health Tracking</h1x>
+  </header>
+</section>
+<section id="mood-trackers">
+      <h2>Hello! How are you feeling today?</h2>
+      <div class="mood options">
+          <a href="#" onclick="selectMood('happy')"><img src="img/happyface.png" alt="Happy Face"></a>
+          <a href="#" onclick="selectMood('sad')"><img src="img/sadface.png" alt="Sad Face"></a>
+          <a href="#" onclick="selectMood('angry')"><img src="img/angryface.png" alt="Angry Face"></a>
+          <a href="#" onclick="selectMood('neutral')"><img src="img/neutralface.png" alt="Neutral Face"></a>
+      </div>
+  </section>
+
+
+<section id="predictions">
+    <h2>Period Predictions</h2>
+    <p>Your period will likely start on April 11th</p>
+    <!-- Maybe add link to input of new period -->
+
+    <p>Based on your cycle, you may be experiencing some anxiety today. It is not uncommon to experience this before a period. To learn more about this, read <a href="https://www.calm.com/blog/anxiety-before-period#:~:text=PMS%20anxiety%20typically%20begins%20in,subsides%20once%20your%20period%20starts." target="_blank">this article about causes of period anxiety</a></p>
+
+
+    <p>You May also be craving salty foods. To learn more about this, read <a href="https://www.healthline.com/health/period-cravings#chocolate" target="_blank">this article about period cravings</a></p>
+    <!-- Add link to learn more about period cravings -->
+</section>
+
+</section>
+
+<section id="cravings-tracker">
+    <h2>Today's Cravings</h2>
+    <p>Log Any Cravings You Have Today</p>
+    <form action="/submit-cravings" method="Post">
+        <div class="group-form">
+            <label for="input-cravings">What foods are you craving today?</label>
+            <input type="text" id="input-cravings", name="cravings", placeholder="Chocolate, Chips, etc.">
+
         </div>
-    </section>
+        <div class="group-form">
+            <label for="scale">How strong is your craving? (1-10)</label>
+            <input type="number" id="scale" name="scale" min="1" max="10">
 
-    <!-- Other sections -->
-
-    <footer>
-        <p>Group Members: Anjali Schatzer, Yusra Abdullahi, Hiba Abbas</p>
-        <div class="image-citations">
-            <h3>Image Credits</h3>
-            <!-- Image citations -->
         </div>
-    </footer>
+        <div class="group-form">
+            <label for="time">What time of day do you experience these cravings</label>
+            <select id="time" name="time of day">
+                <option value="mornings">Mornings</option>
+                <option value="afternons">Afternoons</option>
+                <option value="evenings">Evenings</option>
+                <option value="nights">Nights</option>
+            </select>
+
+        </div>
+        <div class="group-form">
+            <button type="submit">Log Cravings</button>
+
+        </div>
+    </form>
+</section>
+
 </body>
-</html>
+<footer>
+  <p>Group Members: Anjali Schatzer, Yusra Abdullahi, Hiba Abbas</p>
+  <div class="image-citations" >
+    <h3>Image Credits</h3>
+    <p>Happy Face by <cite>Tuk Tuk Design</cite> on
+    <a href="https://pixabay.com/vectors/smiley-emoticon-happy-face-icon-1635449/" target="_blank">Pixabay Website</a></p>
+    <p>Sad Face by <cite>GraphicMama-team</cite> on
+        <a href="https://pixabay.com/vectors/emoji-emoticon-face-emotion-5258627/" target="_blank">Pixabay Website</a></p>
+    <p>Angry Face by <cite>OpenClipart-Vectors</cite> on
+        <a href="https://pixabay.com/vectors/angry-smiley-emoticon-emotion-face-2027818/" target="_blank">Pixabay Website</a></p>
+    <p>Angry Face by <cite>OpenClipart-Vectors</cite> on
+        <a href="https://pixabay.com/vectors/smiley-emoticon-happy-face-icon-1635450/" target="_blank">Pixabay Website</a></p>
 
+  </div>
+</footer>
+</html>
 
 
 <!-- ADD IMAGE CITATIONS -->
