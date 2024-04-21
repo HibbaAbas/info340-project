@@ -28,13 +28,18 @@ h1, h2, h3 {
 .mood-image {
     width: 50px;
     height: 50px;
+    padding: .5em;
+}
+.mood-image:hover {
+    transform: scale(1.2);
 }
 .mood-options {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
 }
+
 
 nav {
     display:flex;
@@ -77,6 +82,29 @@ section {
     display:block
 
 
+}
+
+/* reminders styling */
+#reminder {
+    border-radius: 5%;
+    overflow: hidden;
+}
+.info-shape{
+    background-color: #FFE4E1;
+    border-radius: 50%;
+    shape-outside: circle(50%);
+    width: 400px;
+    height: 400px;
+    border: 2px solid;
+    border-color: #FFB6C1;
+}
+.info-shape:hover {
+    background-color:#FFB6C1;
+}
+.info {
+    text-align: center;
+    padding: 2.5rem;
+    line-height: 3;
 }
 
 /* calendar styling */
