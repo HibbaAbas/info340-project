@@ -69,6 +69,28 @@ section {
 
 }
 
+/* calendar styling */
+#calendar {
+    border-radius: 5%;
+    overflow: hidden;
+}
+h3 {
+    text-align:center;
+}
+table {
+    border-collapse: collapse;
+    background-color: #FFE4E1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+thead tr {
+    background: #FFB6C1;
+}
+.next-month {
+    color: gray;
+}
+
 footer {
     font-size: 0.8rem;
 }
