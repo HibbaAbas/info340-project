@@ -17,27 +17,27 @@ h1, h2, h3 {
 
 /* nav bar */
 nav {
-    display:flex;
-    flex-direction:column;
-    border-radius:10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
     background: #ffccd5;
     padding: 10px 15px;
 
 }
-nav a:hover, a:hover {
-    color:#800080;
-    text-decoration:underline;
+nav a:hover {
+    color: #800080;
+    text-decoration: underline;
 }
-a:hover {
-    text-decoration:underline;
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
 }
-/* check */
-.navbar {
-    display:flex;
-    flex-direction:column;
-}
-.nav-item {
+nav li {
     margin: 0.5rem;
+    list-style-type: none;
 }
 /*         */
 
@@ -75,8 +75,7 @@ section {
 .right-side {
     display: flex;
     flex-direction: column;
-    margin-left: 5px;
-    margin-bottom: 5%;
+
 }
 
 /* reminders styling */
