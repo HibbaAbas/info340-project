@@ -97,6 +97,7 @@ table th {
 }
 
 /* styling for reminders and readings */
+/* this styling is used alot for blocks of information displayed */
 .reminder,
 .reading {
     background-color: #FFE4E1;
