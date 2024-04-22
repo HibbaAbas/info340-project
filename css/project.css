@@ -1,5 +1,4 @@
-/* Add styling for nav bar */
-
+/* basic styling */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fff0f5;
@@ -44,7 +43,7 @@ section {
     margin: 0 auto;
 }
 
-/* index styling for large screens */
+/* index styling for mobile screens */
 .container {
     display: flex;
     flex-direction: column;
@@ -91,10 +90,13 @@ table th {
     color: gray;
 }
 
+/* format index page */
+/* no sidebar on mobile screens */
 .sidebar {
-    width: 30%;
+    width: 100%;
 }
 
+/* styling for reminders and readings */
 .reminder,
 .reading {
     background-color: #FFE4E1;
@@ -104,9 +106,6 @@ table th {
     padding: 20px;
 }
 
-.sidebar {
-    width: 100%;
-}
 .reminder h2,
 .reading h2 {
     text-align: center;
@@ -148,7 +147,6 @@ footer {
 }
 
 /* medium screens */
-
 @media (min-width: 1028px) {
     body {
         font-size: 1.5rem;
@@ -171,14 +169,13 @@ footer {
         padding: 20px;
     }
 
-    /* nav bar */
+    /* nav bar visible */
     nav {
         display: flex;
         flex-direction: row;
         border-radius: 10px;
         background: #ffccd5;
         padding: 10px 15px;
-
     }
 
     nav a:hover {
@@ -216,11 +213,12 @@ footer {
         margin-right: 25px;
         overflow-x: auto;
     }
+
     table th,
-table td {
-    padding: 20px;
-    text-align: center;
-}
+    table td {
+        padding: 20px;
+        text-align: center;
+    }
 
     .sidebar {
         width: 30%;
