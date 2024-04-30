@@ -14,9 +14,22 @@ h3 {
     font-family: 'Kaushan Script', fantasy;
 }
 
+
 /* nav bar */
+
+.hamburger-menu {
+    display:block;
+    font-size:30px;
+    padding: 10px 10px;
+    cursor:pointer;
+}
+
 nav {
-    display: none;
+    display: block;
+}
+
+nav ul{
+    display:none;
 }
 
 header h1 {
@@ -179,6 +192,9 @@ footer {
         padding: 10px 15px;
     }
 
+    .hamburger-menu {
+        display:none;
+    }
     nav a:hover {
         color: #800080;
         text-decoration: underline;
