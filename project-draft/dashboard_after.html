@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Group 5">
+    <meta name="description"
+        content="Empowering Menstrual Health Tracking: an inclusive, free web application to help people understand and track their periods. This site will allow users to utilize advanced tracking features, personalized insights, and professional advice without the burden of a subscription.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <title>Project Draft</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="reading.html">Further Reading</a></li>
+            <li><a href="reminders.html">Reminders</a></li> <!-- Added reminders.html here -->
+        </ul>
+    </nav>
+
+    <section class="reminder">
+        <header>
+            <h2>Your Period Starts Today!</h2>
+        </header>
+        <h3>Log Your Symptoms</h3>
+        <form action="/submit-symptoms" method="Post">
+            <div class="group-form">
+                <label for="input-flow">what is your flow level?</label>
+                <input type="number" id="input-flow" , name="flow" , min="1" max="5">
+            </div>
+            <div class="group-form">
+                <label for="pain-scale">what is your pain level?</label>
+                <input type="number" id="pain-scale" name="scale" min="1" max="10">
+            </div>
+            <div class="group-form">
+                <label for="notes">notes</label>
+                <input type="text" id="extra-notes" , name="notes" , placeholder="unusual pains, new medication, etc">
+                </select>
+            </div>
+            <div class="group-form">
+                <button type="submit">Log Symptoms</button>
+            </div>
+        </form>
+    </section>
