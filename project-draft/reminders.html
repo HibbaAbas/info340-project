@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Group 5">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/project.css">
+
+    <title>Period Tracking Resources</title>
+    <link rel="icon" type="image/png" href="img/icon.png">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="reading.html">Further Reading</a></li>
+            <li><a href="reminders.html">Reminders</a></li>
+        </ul>
+    </nav>
+    <section id="reminder" class="reminder-section">
+        <header>
+            <h2>Reminder</h2>
+        </header>
+        <div class="reminder-bubble" style="background-color: #ffccd5; padding: 20px; border-radius: 10px;">
+            <p style="font-size: 1.2em;">Menstrual Cycle: __ days</p>
+            <p style="font-size: 1.2em;">Next Period: April 22</p>
+            <p style="font-size: 1.2em;">Today's Date: April 20</p>
+            <p style="font-size: 1.2em;">Are you taking any medication today?</p>
+            <form action="/submit-medication-status" method="post">
+                <label class="container" style="font-size: 1.2em;">I have taken medication
+                    <input type="radio" name="medication" value="taken">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="font-size: 1.2em;">I have not taken medication
+                    <input type="radio" name="medication" value="notTaken">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container" style="font-size: 1.2em;">I am out of medication
+                    <input type="radio" name="medication" value="out">
+                    <span class="checkmark"></span>
+                </label>
+
+                <br>
+                <button type="submit" class="submit-btn"
+                    style="background-color: #800080; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Submit</button>
+            </form>
+            <p style="font-size: 1.2em;">Check if you have pads/tampons:</p>
+            <form action="/submit-supply-check" method="post">
+                <button type="submit" class="image-button"
+                    style="background-color: #800080; color: white; border: none; padding: 10px; border-radius: 50%; cursor: pointer;">
+                    <img src="check-supplies.png" alt="Check Supplies" style="width: 50px; height: 50px;">
+                </button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
