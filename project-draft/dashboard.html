@@ -4,41 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Group 5">
-    <!-- <meta name="description" content="Empowering Menstrual Health Tracking: an inclusive, free web application to help people understand and track their periods. This site will allow users to utilize advanced tracking features, personalized insights, and professional advice without the burden of a subscription."> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/project.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <link rel="icon" type="image/png" href="img/icon.png">
+
     <title>User Dashboard</title>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="reading.html">Further Reading</a></li>
-            <li><a href="reminders.html">Reminders</a></li> <!-- Added reminders.html here -->
-        </ul>
-    </nav>
-    <section>
-        <header>
-            <h1>User Dashboard For Menstrual Health Tracking</h1x>
-        </header>
-        <h2>Period Predictions</h2>
-        <p>Your period will likely start on April 11th</p>
-    </section>
-    <section class="mood-trackers">
-        <h2>Hello! How are you feeling today?</h2>
-        <div class="mood options">
-            <button class="button-mood" onclick="selectMood('happy')"><img src="img/happyface.png"
-                    alt="Happy Face"></button>
-            <button class="button-mood" onclick="selectMood('sad')"><img src="img/sadface.png" alt="Sad Face"></button>
-            <button class="button-mood" onclick="selectMood('angry')"><img src="img/angryface.png"
-                    alt="Angry Face"></button>
-            <button class="button-mood" onclick="selectMood('neutral')"><img src="img/neutralface.png"
-                    alt="Neutral Face"></button>
-        </div>
-    </section>
+     <nav>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="dashboard.html">Logs</a></li>
+      <li><a href="reading.html">Stats</a></li>
+      <div class="right">
+        <li><a href="reminders.html">Log out</a></li>
+        <li><a href="reminders.html">About us</a></li>  
+      </div>
+    </ul>
+  </nav>
+
+  <section class="logs_container">
+    <div class="logs_header"> 
+        <p>Logs</p>
+        <p>Filter</p>
+    </div>
+    <div class="log-grid">
+        <img src="img/log1.png" alt="log1">
+        <img src="img/log1.png" alt="log2">
+
+    </div>
+  </section>
+
+    
+        
+        
+  
 
 
     <section class="predictions">

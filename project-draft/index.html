@@ -9,29 +9,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/project.css">
   <link rel="icon" type="image/png" href="img/icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
   <title>Project Draft</title>
 </head>
 
 <body>
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="dashboard.html">Dashboard</a></li>
-      <li><a href="reading.html">Further Reading</a></li>
-      <li><a href="reminders.html">Reminders</a></li> <!-- Added reminders.html here -->
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="dashboard.html">Logs</a></li>
+      <li><a href="reading.html">Stats</a></li>
+      <div class="right">
+        <li><a href="reminders.html">Log out</a></li>
+        <li><a href="reminders.html">About us</a></li>  
+      </div>
     </ul>
   </nav>
 
-  <header>
-    <h1>Empowering Menstrual Health Tracking</h1>
-  </header>
 
   <section class="predictions">
-    <h2>Period Predictions</h2>
     <div class="predictions-container">
-      <p><b>5 Days to Period</b></p>
-      <p>Did your period start today?</p>
-      <p>Make a log</p>
+      <h3>Day two of period</h3>
+      <p>Did your period end today?</p>
     </div>
   </section>
 
@@ -113,78 +117,55 @@
     <div class="sidebar">
       <section class="reminder">
         <header>
-          <h2>Reminder</h2>
+          <h3>Reminders</h3>
         </header>
         <div class="info-shape">
-          <div class="info">
-            <p> Menstrual Cycle is __ days</p>
-            <p> Next Period April 22</p>
-            <p><a href="reminders.html"> Are you taking any medication?</a></p>
+          <div class="reminders">
+            <p><input type="checkbox"> take birth control</p>
+            <p><input type="checkbox"> buy more pads</p>
+            <p><input type="checkbox"> drink more pads</p>
+            <button type="button"><i class="fas fa-plus"></i>Add a reminder</button>
           </div>
         </div>
       </section>
-      <section class="reading">
+      <section class="tip">
         <header>
-          <h2>Further Reading</h2>
+          <h3>Tips</h3>
         </header>
         <div class="info-shape">
-          <div class="info">
-            <p>Based on your cycle, you may be experiencing some anxiety today. It is not uncommon to experience this
-              before a
-              period. To learn more about this, read <a
+          <div class="tips">
+            <p><span class="star">&#9733;</span><a
                 href="https://www.calm.com/blog/anxiety-before-period#:~:text=PMS%20anxiety%20typically%20begins%20in,subsides%20once%20your%20period%20starts."
-                target="_blank">this article about causes of period anxiety</a></p>
-          </div>
-        </div>
-        <div class="info-shape">
-          <div class="info">
-            <p>You May also be craving salty foods. To learn more about this, read <a
+                target="_blank">How to handle period anxiety</a></p>
+            <p><span class="star">&#9733;</span><a
                 href="https://www.healthline.com/health/period-cravings#chocolate" target="_blank">this article about
-                period
-                cravings</a></p>
+                period cravings</a></p>
           </div>
         </div>
       </section>
     </div>
   </section>
 
-  <section>
+  <section class="mood_check">
     <header>
-      <h2>Mission Statement</h2>
+      <h3>How are you feeling today?</h3>
     </header>
-    <p>Our mission is to empower individuals with periods to take control of their reproductive health journey. We
-      provide a user-friendly platform that allows users to accurately track their menstrual cycles, monitor symptoms,
-      and access valuable health insights. We hope we can help prioritize their well-being and lead healthier, happier
-      lives!The app's main focus is inclusivity; we hope to empower individuals who may otherwise face barriers in
-      accessing menstrual health resources.
-      The platform emphasizes personalized insights to ensure users receive tailored support that acknowledges all
-      diverse experiences.
-      Overall, our web application serves as a solution to the problem of limited access to period tracking tools by
-      providing an inclusive and accessible platform at no cost.</p>
+    <div class="mood_top">
+      <img src="img/a_emoji1.png" alt="happy face">
+      <img src="img/a_emoji2.png" alt="side eye face">
+      <img src="img/a_emoji3.png" alt="sobbing face">
+    </div>
+    <div class="mood_bottom">
+      <img src="img/a_emoji4.png" alt="angry face">
+      <img src="img/a_emoji5.png" alt="happy face">
+      <img src="img/a_emoji6.png" alt="side eye face">
   </section>
+
 
   <footer>
     <p>Group Members: Anjali Schatzer, Yusra Abdullahi, Hiba Abbas, Amartya Chaube</p>
-    <div class="image-citations">
-      <h3>Image Credits</h3>
-      <p>Happy Face by <cite>Tuk Tuk Design</cite> on
-        <a href="https://pixabay.com/vectors/smiley-emoticon-happy-face-icon-1635449/" target="_blank">Pixabay
-          Website</a>
-      </p>
-      <p>Sad Face by <cite>GraphicMama-team</cite> on
-        <a href="https://pixabay.com/vectors/emoji-emoticon-face-emotion-5258627/" target="_blank">Pixabay Website</a>
-      </p>
-      <p>Angry Face by <cite>OpenClipart-Vectors</cite> on
-        <a href="https://pixabay.com/vectors/angry-smiley-emoticon-emotion-face-2027818/" target="_blank">Pixabay
-          Website</a>
-      </p>
-      <p>Angry Face by <cite>OpenClipart-Vectors</cite> on
-        <a href="https://pixabay.com/vectors/smiley-emoticon-happy-face-icon-1635450/" target="_blank">Pixabay
-          Website</a>
-      </p>
-      <p>Favicon by <cite>Flatart</cite>on <a href="https://www.iconfinder.com/search?q=health&price=free"
-          target="_blank">iconfinder website</a></p>
-    </div>
+    <p>&copy; 2024</p>
+    
   </footer>
 
 </body>
