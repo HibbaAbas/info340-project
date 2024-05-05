@@ -26,7 +26,16 @@ h3 {
     font-style: normal;
 }
 
-/* Navbar */
+
+ /* add the same styling for text input */
+
+ /* styling for medium screens */
+@media (min-width: 768px) {
+
+} 
+ /* styling for larger screens */
+ @media (min-width: 992px) {
+    /* Navbar */
 nav {
     background-color: #F0D9DA;
     color: black;
@@ -317,4 +326,5 @@ footer {
     left: 10px;
     font-size: 1em; 
 }
- /* add the same styling for text input */
+
+ }
