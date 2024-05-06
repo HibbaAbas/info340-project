@@ -109,6 +109,8 @@ table td {
         margin-top:10px;
 
     }
+
+/* Mood check */
    .mood_check {
     display:flex;
     flex-direction:column;
@@ -128,25 +130,58 @@ table td {
 
    .mood_top, .mood_bottom {
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap:nowrap;
     width:100%;
     align-items: center;
     margin: 0;
     padding: 0;
    }
+
+
+
    .mood_check img {
-    /* flex: 1; */
-    /* flex: 0 0 auto; */
-    margin: 0 10px;
+    margin: 5px 10px;
     width:60px;
     height:60px;
-    /* margin: 0 5px; */
     cursor:pointer;
    
    }
    
 
+
+.predictions {
+    background-image: url('../img/prediction_bg.png');
+    background-size: cover;
+    background-position: top center;
+}
+.predictions-container {
+    width: 275px;
+    height: 275px;
+    border-radius: 50%;
+    border: 30px solid #C86B85;
+    background-color: #F0D9DA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem auto;
+}
+.predictions-container:hover {
+    transform: scale(1.1);
+}
+.predictions-container p {
+    margin: 1.5rem 0;
+    
+    
+    /* change to rem for accessibility */
+    font-size: 12px;
+}
+.predictions-container p:hover {
+    text-decoration: underline;
+}
 } 
  /* styling for larger screens */
  @media (min-width: 992px) {
