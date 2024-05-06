@@ -160,98 +160,50 @@ footer {
     font-size: 0.8rem;
 }
 
-/* medium screens */
-@media (min-width: 1028px) {
+/* mobile screens */
+@media only screen and (max-width: 767px) {
     body {
-        font-size: 1.5rem;
-        padding: 30px 90px;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    .flex-container,
-    section {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        font-size: 1rem;
         padding: 20px;
     }
 
-    /* nav bar visible */
-    nav {
-        display: flex;
-        flex-direction: row;
-        border-radius: 10px;
-        background: #ffccd5;
-        padding: 10px 15px;
-    }
-
-    .hamburger-menu {
-        display:none;
-    }
-    nav a:hover {
-        color: #800080;
-        text-decoration: underline;
-    }
-
-    nav ul {
-        display: flex;
-        list-style-type: none;
-        justify-content: space-around;
-        padding: 0;
-    }
-
-    nav li {
-        margin: 0.5rem;
-        list-style-type: none;
-    }
-
-    /* index styling for large screens */
     .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    /* calendar styling */
-    .calendar {
-        background-color: #FFE4E1;
-        border-radius: 10px;
-        border: 2px solid #FFB6C1;
-        width: 70%;
-        padding: 10px;
-        margin-right: 25px;
-        overflow-x: auto;
-    }
-
-    table th,
-    table td {
         padding: 20px;
-        text-align: center;
+    }
+
+    .calendar {
+        margin-right: 0;
     }
 
     .sidebar {
-        width: 30%;
-    }
-
-    .button-mood img {
-        width: 70px;
-    }
-
-    .mood-options,
-    .group-form {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        flex-direction: column;
         width: 100%;
     }
 
+    .button-mood img {
+        width: 50px;
+    }
+}
+
+/* main iPhone screen size */
+@media only screen and (max-width: 414px) {
+    body {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .calendar {
+        margin-right: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .button-mood img {
+        width: 40px;
+    }
 }
