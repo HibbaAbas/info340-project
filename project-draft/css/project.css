@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* Global styles */
 body {
     font-family: 'Inria Serif', sans-serif;
     background-color: #F9ECEC;
@@ -12,241 +13,84 @@ body {
 }
 
 h1 {
-    /* change to size for mobile */
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 h2 {
-    /* change to size for mobile */
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 h3 {
-    /* change to size for mobile */
     font-size: 1.75rem;
     margin-bottom: .5rem;
     font-weight: 400;
     font-style: normal;
 }
 
-/* mobile has week view instead of calendar view */
-.calendar {
-    display: none;
-}
-
-.calendar-mobile {
-    position: relative;
-}
-
-.calendar-mobile img {
-    display: block;
-    float: right;
-    margin: .5em;
-    width: 40px;
-    height: 40px;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.today {
-    background-color: #F0D9DA;
-}
-
-table th {
-    background-color: #F0D9DA;
-}
-
-table th,
-table td {
-    padding: 20px 10px;
-    text-align: center;
-}
-
-table th,
-table td {
-    padding: 20px;
-    text-align: center;
-}
-
-/* miscellanous */
-.star {
-    color: #C86B85;
-    margin-right: .5em;
-}
-
-button {
-    background: none;
-    border: none;
-    color: #C86B85;
-    font: inherit;
-    font-size: 1.3rem;
-    cursor: pointer;
-    margin-bottom: 2em;
-}
-
-footer {
-    margin-top: 2em;
-    background-color: #F0D9DA;
-}
-
-
-/* styling for medium screens */
-@media (min-width: 768px) {
-    h3 {
-        font-size: 1.25rem;
-        margin-top: .8rem;
-        margin-bottom: .5rem;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    /* predictions */
-    .predictions-container {
-        width: 275px;
-        height: 275px;
-        border-radius: 50%;
-        border: 20px solid #C86B85;
-        background-color: #F0D9DA;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 2rem;
-        margin: 2rem auto;
-    }
-
-    .predictions {
-        background-image: url('../img/prediction_bg.png');
-        background-size: cover;
-        background-position: top center;
-    }
-
-    .predictions-container:hover {
-        transform: scale(1.1);
-    }
-
-    .predictions-container p {
-        margin: 1.5rem 0;
-        /* change to rem for accessibility */
-        font-size: 12px;
-    }
-
-    .predictions-container p:hover {
-        text-decoration: underline;
-    }
-
-    /* calendar */
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .calendar-mobile {
-        display: none;
-    }
-
-    .calendar {
-        display: block;
-    }
-
-    calendar h2,
-    .calendar h3 {
-        text-align: center;
-    }
-
-    /* sidebar */
-    .sidebar {
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin: 0 auto;
-        margin-top: 2em;
-        border-top: 1px solid #C86B85;
-    }
-
-    .sidebar header {
-        text-align: center;
-        margin-bottom: 1em;
-    }
-
-    .sidebar p {
-        font-size: 1rem;
-        margin-bottom: .5em;
-    }
-
-    button {
-        font-size: 1rem;
-    }
-
-    /* mood check */
-    .mood_check {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .mood_top,
-    .mood_bottom {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        width: 100%;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    .mood_check img {
-        margin-top: 1em;
-        margin-bottom: 1em;
-        margin-right: 5em;
-        margin-left: 5em;
-        width: 80px;
-        height: 80px;
-        cursor: pointer;
-    }
-
-    .mood_check img:hover {
-        transform: scale(1.2);
-    }
-}
-
-/* styling for larger screens */
-@media (min-width: 992px) {
+/* Mobile specific styles */
+@media only screen and (max-width: 767px) {
     h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
+        font-size: 2rem;
     }
 
     h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 1.8rem;
     }
 
     h3 {
-        font-size: 1.75rem;
-        margin-bottom: .5rem;
-        font-weight: 400;
-        font-style: normal;
+        font-size: 1.5rem;
+    }
+
+    .calendar {
+        display: none;
+    }
+
+    .calendar-mobile {
+        display: block;
+    }
+
+    .calendar-mobile img {
+        width: 30px;
+        height: 30px;
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+    }
+}
+
+/* Main iPhone screen size */
+@media only screen and (max-width: 414px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Larger screens */
+@media (min-width: 992px) {
+    h1,
+    h2,
+    h3 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
     }
 
     /* Navbar */
     nav {
         background-color: #F0D9DA;
         color: black;
-        padding: 1rem
+        padding: 1rem;
     }
 
     nav ul {
@@ -309,7 +153,6 @@ footer {
     }
 
     /* Calendar */
-    /* index styling for large screens */
     .container {
         display: flex;
         flex-direction: row;
@@ -372,7 +215,6 @@ footer {
     input[type="checkbox"] {
         transform: scale(1.5);
         margin-right: 10px;
-        /* Adjust as needed */
     }
 
     button {
@@ -384,38 +226,24 @@ footer {
     }
 
     /* Mood check */
-    /* I am having trouble with aligning this section to the left */
     .mood_check {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
     }
 
-    .mood_top {
-        display: flex;
-        justify-content: center;
-        margin-top: .5em;
-    }
-
+    .mood_top,
     .mood_bottom {
-        display: flex;
-        justify-content: center;
-        margin-top: 1.5em;
-        margin-bottom: 4em;
+        justify-content: flex-start;
     }
 
     .mood_check img {
-        height: 120px;
-        width: 120px;
-        margin-right: 4em;
+        margin-right: 2em;
     }
 
     .mood_check img:hover {
         transform: scale(1.2);
     }
 
-    /* logs page */
+    /* Logs page */
     .logs_header {
         display: flex;
         margin-top: 6em;
@@ -442,7 +270,7 @@ footer {
         margin-left: 10em;
     }
 
-    /* log in page */
+    /* Log in page */
     .cover {
         display: flex;
     }
@@ -454,13 +282,13 @@ footer {
 
     .log-in {
         background-color: white;
-        margin-left: 1.5em;
+        margin-left: 3em;
         flex-grow: 1;
         height: 100vh;
     }
 
     .log-in-form {
-        width: 400px;
+        width: 500px;
         height: 500px;
         background-color: #F6F5F5;
         margin: auto;
@@ -478,7 +306,6 @@ footer {
         text-align: left;
         padding: 0;
         margin-left: 1.2em;
-
         color: #000000;
         font-size: .8em;
     }
@@ -487,38 +314,4 @@ footer {
     .log-in-form button {
         display: block;
         width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .log-in-form button {
-        padding: 10px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-    .log-in-form button:hover {
-        background-color: #0056b3;
-    }
-
-    .log-in-form input[type="text"],
-    .log-in-form input[type="password"] {
-        background-color: #D9D9D9;
-        color: #767575;
-        border: none;
-        height: 40px;
-        width: 80%;
-        margin: auto;
-        margin-top: 3em;
-    }
-
-    .log-in-form input[type="text"]::placeholder,
-    .log-in-form input[type="password"]::placeholder {
-        position: absolute;
-        top: 20px;
-        left: 10px;
-        font-size: 1em;
-    }
-
-}
+        margin-bottom
