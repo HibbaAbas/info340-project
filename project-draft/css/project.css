@@ -65,6 +65,28 @@ nav {
     display: none;
 }
 
+/* Add mobile menu styles here */ /*This is code that I added - Amartya: Starts*/
+#mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #F0D9DA;
+    width: 100%;
+    text-align: left;
+}
+
+#mobile-menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #C86B85;
+}
+
+#mobile-menu li:last-child a {
+    border-bottom: none;
+}
+/*This is code that I added - Amartya: End*/
+
 /* predictions */
 .predictions {
     display: flex;
@@ -355,6 +377,20 @@ footer {
     button {
         font-size: 1.3rem;
     }
+/*This is code that I added - Amartya: Start*/
+    .hamburger {
+        display: block; /* Ensure the hamburger menu is visible */
+    }
+
+    nav {
+        display: none; /* Initially hides the full navigation menu */
+    }
+
+    .mobile-nav {
+        display: flex; /* Keeps the mobile navigation bar visible */
+    }
+    /*This is code that I added - Amartya: End*/
+
 }
 
 /* styling for larger screens */
@@ -682,4 +718,18 @@ footer {
         left: 10px;
         font-size: 1em;
     }
+    /*This is code that I added - Amartya: Start*/
+
+    .hamburger {
+        display: block; /* Keeps the hamburger visible on tablet screens */
+    }
+
+    nav {
+        display: none; /* Continues to hide the full navigation on tablet sizes */
+    }
+
+    .mobile-nav {
+        display: flex; /* Ensures the mobile navigation styling is applied */
+    }
+    /*This is code that I added - Amartya: End*/
 }
