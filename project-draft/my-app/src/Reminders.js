@@ -15,7 +15,7 @@ const Reminders = () => {
 
   return (
     <section className="reminder">
-      <h2>Reminders</h2>
+      <h3>Reminders</h3>
       <ul>
         {reminders.map((reminder, index) => (
           <li key={index}>{reminder}</li>
