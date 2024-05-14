@@ -10,6 +10,93 @@
     <link rel="stylesheet" href="css/project.css">
     <link rel="icon" type="image/png" href="img/icon.png">
     <title>Project Draft</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffbad2; /* Lighter Pink */
+        }
+
+        nav {
+            background-color: #f2a7c3; /* Pink */
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .reminder {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #f69eb9; /* Medium Pink */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .reminder header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .reminder h2 {
+            color: #fff;
+            margin: 0;
+        }
+
+        .reminder h3 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .group-form {
+            margin-bottom: 15px;
+        }
+
+        .group-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .group-form input,
+        .group-form select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .group-form button {
+            background-color: #d0849e; /* Lighter Pink */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px; /* Adjusted margin */
+        }
+
+        .group-form button:hover {
+            background-color: #f2a7c3; /* Pink on hover */
+        }
+    </style>
 </head>
 
 <body>
@@ -29,24 +116,24 @@
         <h3>Log Your Symptoms</h3>
         <form action="/submit-symptoms" method="Post">
             <div class="group-form">
-                <label for="input-flow">what is your flow level?</label>
-                <input type="number" id="input-flow" , name="flow" , min="1" max="5">
+                <label for="input-flow">What is your flow level?</label>
+                <input type="number" id="input-flow" name="flow" min="1" max="5">
             </div>
             <div class="group-form">
-                <label for="pain-scale">what is your pain level?</label>
+                <label for="pain-scale">What is your pain level?</label>
                 <input type="number" id="pain-scale" name="scale" min="1" max="10">
             </div>
             <div class="group-form">
                 <label for="notes">Describe your symptoms</label>
-                <input type="text" id="extra-notes" , name="notes" , placeholder="unusual pains, new medication, etc">
-              </div>
-                   <div class="group-form">
-                       <label for="time">What time of day do you experience these cravings</label>
-                       <select id="time" name="time_of_day">
-                           <option value="mornings">Mornings</option>
-                           <option value="afternoons">Afternoons</option>
-                           <option value="evenings">Evenings</option>
-                           <option value="nights">Nights</option>
+                <input type="text" id="extra-notes" name="notes" placeholder="Unusual pains, New Medication, Mood swings, Cravings, etc.">
+            </div>
+            <div class="group-form">
+                <label for="time">What time of day do you experience cravings?</label>
+                <select id="time" name="time_of_day">
+                    <option value="mornings">Mornings</option>
+                    <option value="afternoons">Afternoons</option>
+                    <option value="evenings">Evenings</option>
+                    <option value="nights">Nights</option>
                 </select>
             </div>
 
@@ -55,3 +142,6 @@
             </div>
         </form>
     </section>
+</body>
+
+</html>
