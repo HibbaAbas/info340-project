@@ -1,735 +1,90 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Navbar */
+nav {
+    background-color: #F0D9DA;
+    color: black;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-body {
-    font-family: 'Inria Serif', sans-serif;
-    background-color: #F9ECEC;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-h1 {
-    /* change to size for mobile */
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-h2 {
-    /* change to size for mobile */
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-h3 {
-    /* change to size for mobile */
-    font-size: 1.25rem;
-    margin-bottom: .5rem;
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* navbar */
-.mobile-nav {
+nav ul {
+    list-style-type: none;
     display: flex;
     justify-content: space-between;
-    /* Change this */
-    width: 100%;
-    height: 50px;
-    background-color: #F0D9DA;
 }
 
-.left-nav,
-.right-nav {
-    display: flex;
-    margin-top: .5em;
+nav li {
+    margin: 0 1rem;
 }
 
-.hamburger {
-    margin-left: 1em;
-}
-
-.logout {
-    margin-right: 1em;
-    margin-top: .25em;
-}
-
-.mobile-nav a {
+nav a {
     text-decoration: none;
     color: black;
+    font-size: 1.2rem;
 }
 
-nav {
-    display: none;
+nav a:hover {
+    text-decoration: underline;
 }
 
-/* Add mobile menu styles here */ /*This is code that I added - Amartya: Starts*/
-#mobile-menu ul {
-    list-style-type: none;
-    padding: 0;
-    background-color: #F0D9DA;
-    width: 100%;
-    text-align: left;
+/* Mood Trackers */
+.mood-trackers {
+    text-align: center;
+    padding: 2rem;
 }
 
-#mobile-menu li a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-    border-bottom: 1px solid #C86B85;
-}
-
-#mobile-menu li:last-child a {
-    border-bottom: none;
-}
-/*This is code that I added - Amartya: End*/
-
-/* predictions */
-.predictions {
+.mood-options {
     display: flex;
     justify-content: center;
-    text-align: center;
 }
 
-.predictions-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #F0D9DA;
-    border: 10px solid #C86B85;
-    margin: 2em;
-    padding: 20px;
-    margin-top: 2em;
-}
-
-.predictions h3 {
-    margin-top: 1em;
-    font-size: 1rem;
-}
-
-.predictions p {
-    font-size: .8rem;
-}
-
-/* mobile has week view instead of calendar view */
-.calendar {
-    display: none;
-}
-
-.calendar-mobile {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 0 auto;
-}
-
-.calendar-mobile img {
-    display: block;
-    margin: .5em;
-    width: 40px;
-    height: 40px;
-}
-
-.mobile-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-}
-
-.mobile-table th,
-.mobile-table td {
-    padding: 15px;
-    text-align: center;
-}
-
-.today {
-    background-color: #F0D9DA;
-}
-
-table th {
-    background-color: #F0D9DA;
-}
-
-/* sidebar */
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 2.5em;
-    margin-bottom: 3.5em;
-    border-top: 1px solid #C86B85;
-}
-
-.sidebar h3 {
-    text-align: center;
-    margin-top: .5em;
-    margin-bottom: 1em;
-}
-
-.sidebar p {
-    text-align: left;
-    margin-left: 1.5em;
-}
-
-.reminder {
-    border-bottom: 1px solid #C86B85;
-}
-
-/* mood check*/
-.mood_check header {
-    text-align: center;
-    margin-top: 1em;
-}
-
-.mood_check img {
-    height: 70px;
-    width: 70px;
-    margin-bottom: 1em;
-}
-.mood_top, .mood_bottom {
-    display: flex;
-    justify-content: space-around;
-}
-
-/* miscellanous */
-.star {
-    color: #C86B85;
-    margin-right: .5em;
-}
-
-button {
-    background: none;
-    border: none;
-    color: #C86B85;
-    font: inherit;
-    font-size: 1rem;
+.mood-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 1rem;
     cursor: pointer;
-    margin-bottom: 2em;
-    margin-left: 1.5em;
+    transition: transform 0.3s ease;
 }
 
-footer {
-    margin-top: 2em;
-    background-color: #F0D9DA;
+.mood-image:hover {
+    transform: scale(1.1);
 }
 
-/* styling for medium screens */
-@media (min-width: 768px) {
-    h3 {
-        font-size: 1.25rem;
-        margin-top: .8rem;
-        margin-bottom: .5rem;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    /* predictions */
-    .predictions-container {
-        width: 275px;
-        height: 275px;
-        border-radius: 50%;
-        border: 20px solid #C86B85;
-        background-color: #F0D9DA;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 2rem;
-        margin: 2rem auto;
-    }
-
-    .predictions {
-        background-image: url('../img/prediction_bg.png');
-        background-size: cover;
-        background-position: top center;
-    }
-
-    .predictions-container:hover {
-        transform: scale(1.1);
-    }
-
-    .predictions-container p {
-        margin: 1.5rem 0;
-        /* change to rem for accessibility */
-        font-size: 12px;
-    }
-
-    .predictions-container p:hover {
-        text-decoration: underline;
-    }
-
-    /* calendar */
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .calendar-mobile {
-        display: none;
-    }
-
-    .calendar {
-        display: block;
-    }
-
-    .calendar h2,
-    .calendar h3 {
-        text-align: center;
-    }
-
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    table th,
-    table td {
-        padding: 20px 10px;
-        text-align: center;
-    }
-
-    table th,
-    table td {
-        padding: 20px;
-        text-align: center;
-    }
-
-    /* sidebar */
-    .sidebar {
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin: 0 auto;
-        margin-top: 2em;
-        border-top: 1px solid #C86B85;
-    }
-
-    .sidebar header {
-        text-align: center;
-        margin-bottom: 1em;
-    }
-
-    .sidebar p {
-        font-size: 1rem;
-        margin-bottom: .5em;
-    }
-
-    .reminder {
-        border-bottom: 0px;
-    }
-
-    button {
-        font-size: 1rem;
-        background: none;
-        border: none;
-        color: #C86B85;
-        font: inherit;
-        cursor: pointer;
-        margin-bottom: 2em;
-    }
-
-    /* mood check */
-    .mood_check {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .mood_top,
-    .mood_bottom {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        width: 100%;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    .mood_check img {
-        margin-top: 1em;
-        margin-bottom: 1em;
-        margin-right: 5em;
-        margin-left: 5em;
-        width: 80px;
-        height: 80px;
-        cursor: pointer;
-    }
-
-    .mood_check img:hover {
-        transform: scale(1.2);
-    }
-
-    button {
-        font-size: 1.3rem;
-    }
-/*This is code that I added - Amartya: Start*/
-    .hamburger {
-        display: block; /* Ensure the hamburger menu is visible */
-    }
-
-    nav {
-        display: none; /* Initially hides the full navigation menu */
-    }
-
-    .mobile-nav {
-        display: flex; /* Keeps the mobile navigation bar visible */
-    }
-    /*This is code that I added - Amartya: End*/
-
+/* Cravings Tracker */
+.cravings-tracker {
+    text-align: center;
+    padding: 2rem;
 }
 
-/* styling for larger screens */
-@media (min-width: 992px) {
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
+.group-form {
+    margin-bottom: 1rem;
+}
 
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
 
-    h3 {
-        font-size: 1.75rem;
-        margin-bottom: .5rem;
-        font-weight: 400;
-        font-style: normal;
-    }
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
 
-    .mobile-nav {
-        display: none;
-    }
+button[type="submit"] {
+    background-color: #C86B85;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    /* Navbar */
-    nav {
-        display: block;
-        background-color: #F0D9DA;
-        color: black;
-        padding: 1rem
-    }
-
-    nav ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    nav li {
-        margin: 0 1rem;
-    }
-
-    nav div.right {
-        margin-left: auto;
-        display: flex;
-    }
-
-    nav div.right li {
-        margin: 0 10px;
-    }
-
-    nav a {
-        text-decoration: none;
-        color: black;
-        font-size: 1.2rem;
-    }
-
-    /* Predictions Section */
-    .predictions {
-        background-image: url('../img/prediction_bg.png');
-        background-size: cover;
-        background-position: top center;
-    }
-
-    .predictions-container {
-        width: 400px;
-        height: 400px;
-        border-radius: 50%;
-        border: 30px solid #C86B85;
-        background-color: #F0D9DA;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 1rem;
-        margin: 3.5rem auto;
-    }
-
-    .predictions-container:hover {
-        transform: scale(1.1);
-    }
-
-    .predictions-container p {
-        margin: 1.5rem 0;
-        font-size: 18px;
-    }
-
-    .predictions-container p:hover {
-        text-decoration: underline;
-    }
-
-    .predictions h3 {
-        margin-top: 1em;
-        font-size: 1.5rem;
-    }
-
-    /* Calendar */
-    /* index styling for large screens */
-    .container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding-top: 2em;
-    }
-
-    .calendar-mobile {
-        display: none;
-    }
-
-    /* calendar styling */
-    .calendar {
-        display: block;
-        background-color: #F9ECEC;
-        border-radius: 10px;
-        border: 2px solid #F0D9DA;
-        width: 60%;
-        padding: 10px;
-        margin-right: 25px;
-        margin-left: 2em;
-        overflow-x: auto;
-
-    }
-
-    .calendar h2,
-    .calendar h3 {
-        text-align: center;
-    }
-
-    .next-month {
-        color: gray;
-    }
-
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    .today {
-        background-color: #F0D9DA;
-    }
-
-    /* Sidebar */
-    .sidebar {
-        width: 30%;
-        flex-direction: column;
-        background-color: #F0D9DA;
-        padding: 2.5em;
-        padding-top: 1em;
-        margin-right: 2em;
-        border-top: 0px;
-    }
-
-    .sidebar header {
-        text-align: center;
-        margin-bottom: 1em;
-    }
-
-    .sidebar p {
-        font-size: 1.5rem;
-        margin-bottom: 1em;
-    }
-
-    .reminder {
-        border-bottom: 1px solid #C86B85;
-        margin-bottom: 1em;
-    }
-
-    input[type="checkbox"] {
-        transform: scale(1.5);
-        margin-right: 10px;
-        /* Adjust as needed */
-    }
-
-    button {
-        font-size: 1.5rem;
-        background: none;
-        border: none;
-        color: #C86B85;
-        font: inherit;
-        cursor: pointer;
-        margin-bottom: 2em;
-    }
-
-    button i {
-        margin-right: 5px;
-    }
-
-    /* Mood check */
-    /* I am having trouble with aligning this section to the left */
-    .mood_check {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .mood_top {
-        display: flex;
-        justify-content: center;
-        margin-top: .5em;
-    }
-
-    .mood_bottom {
-        display: flex;
-        justify-content: center;
-        margin-top: 1.5em;
-        margin-bottom: 4em;
-    }
-
-    .mood_check img {
-        height: 120px;
-        width: 120px;
-        margin-right: 4em;
-    }
-
-    .mood_check img:hover {
-        transform: scale(1.2);
-    }
-
-    /* logs page */
-    .logs_header {
-        display: flex;
-        margin-top: 6em;
-        border-bottom: 1px solid black;
-        max-width: 85%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 1em;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .logs_header p:first-child {
-        margin-right: 60em;
-    }
-
-    .log-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-    }
-
-    .log-grid img:first-child {
-        margin-left: 10em;
-    }
-
-    /* log in page */
-    .cover {
-        display: flex;
-    }
-
-    .cover img {
-        width: auto;
-        height: 100vh;
-    }
-
-    .log-in {
-        background-color: white;
-        margin-left: 1.5em;
-        flex-grow: 1;
-        height: 100vh;
-    }
-
-    .log-in-form {
-        width: 400px;
-        height: 500px;
-        background-color: #F6F5F5;
-        margin: auto;
-        margin-top: 8em;
-        padding: 20px;
-    }
-
-    .log-in-form h3 {
-        text-align: left;
-        padding: 0;
-        margin-left: 1.2em;
-    }
-
-    .log-in-form p {
-        text-align: left;
-        padding: 0;
-        margin-left: 1.2em;
-
-        color: #000000;
-        font-size: .8em;
-    }
-
-    .log-in-form input,
-    .log-in-form button {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .log-in-form button {
-        padding: 10px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-    .log-in-form button:hover {
-        background-color: #0056b3;
-    }
-
-    .log-in-form input[type="text"],
-    .log-in-form input[type="password"] {
-        background-color: #D9D9D9;
-        color: #767575;
-        border: none;
-        height: 40px;
-        width: 80%;
-        margin: auto;
-        margin-top: 3em;
-    }
-
-    .log-in-form input[type="text"]::placeholder,
-    .log-in-form input[type="password"]::placeholder {
-        position: absolute;
-        top: 20px;
-        left: 10px;
-        font-size: 1em;
-    }
-    /*This is code that I added - Amartya: Start*/
-
-    .hamburger {
-        display: block; /* Keeps the hamburger visible on tablet screens */
-    }
-
-    nav {
-        display: none; /* Continues to hide the full navigation on tablet sizes */
-    }
-
-    .mobile-nav {
-        display: flex; /* Ensures the mobile navigation styling is applied */
-    }
-    /*This is code that I added - Amartya: End*/
+button[type="submit"]:hover {
+    background-color: #A64E6E;
 }
