@@ -2,6 +2,7 @@ import React from 'react';
 
 const Calendar = () => {
     return (
+        <div>
         <section className="container">
             <div className="calendar-mobile">
                 <img src="img/calendar-icon.png" alt="calendar icon" />
@@ -108,5 +109,7 @@ const Calendar = () => {
             </div>
 
         </section>
-    );
-};
+        </div>
+    )
+}
+export default Calendar;

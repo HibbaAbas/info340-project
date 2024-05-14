@@ -14,7 +14,7 @@ const Reminders = () => {
   };
 
   return (
-    <div className="sidebar">
+    <section className="reminder">
       <h2>Reminders</h2>
       <ul>
         {reminders.map((reminder, index) => (
@@ -27,7 +27,7 @@ const Reminders = () => {
         onChange={(e) => setNewReminder(e.target.value)}
       />
       <button onClick={handleAddReminder}>Add Reminder</button>
-    </div>
+    </section>
   );
 };
 

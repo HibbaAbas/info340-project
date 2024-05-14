@@ -1,7 +1,8 @@
 import React from 'react';
-import Reminders from './Reminders';
+
 import Nav from './Nav';
 import Predictions from './Predictions';
+import Container from './Container';
 
 const App = () => {
     return (
@@ -10,7 +11,7 @@ const App = () => {
      
        
         <Predictions />
-        <Reminders />
+        <Container />
    
       </div>
     );
