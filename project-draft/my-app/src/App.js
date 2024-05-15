@@ -16,16 +16,24 @@ const App = () => {
   return (
     <div className="app">
       <Nav />
+      
       {/* Amartya Added this. Check if it is useful and if it is correct - START */}
       <Switch>
-      <Route path="/" exact component={Cover} />
-          <Route path="/predictions" component={Predictions} />
-          <Route path="/container" component={Container} />
-          <Route path="/reading" component={Reading} />
-          <Route path="/mood-check" component={MoodCheck} />
-          {/* Add other routes as necessary */}
+        {/* Renders only the first matching Route based on URL path */}
+        <Route path="/" exact component={Cover} />
+        {/* Renders 'Cover' component for exact match of root path "/" */}
+        <Route path="/predictions" component={Predictions} />
+        {/* Renders 'Predictions' for "/predictions" path */}
+        <Route path="/container" component={Container} />
+        {/* Renders 'Container' for "/container" path */}
+        <Route path="/reading" component={Reading} />
+        {/* Renders 'Reading' for "/reading" path */}
+        <Route path="/mood-check" component={MoodCheck} />
+        {/* Renders 'MoodCheck' for "/mood-check" path */}
+        {/* Add other routes as necessary */}
       </Switch>
       {/* END */}
+
       {/* <Cover/> */}
       <Predictions />
       <Container />
