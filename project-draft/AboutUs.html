@@ -1,106 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Group 5">
-    <meta name="description" content="About Us - Empowering Menstrual Health Tracking: Learn more about our team and mission.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffbad2; /* Light pink background */
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="author" content="Group 5">
+  <meta name="description"
+    content="About Us - Empowering Menstrual Health Tracking: Learn more about our team and mission.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            background-color: #ffbad2; /* Dark pink header */
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
 
-        h1, h2 {
-            margin: 10px 0;
-        }
+  <link rel="stylesheet" href="css/project.css">
 
-        section {
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: white;
-        }
+  <link rel="icon" type="image/png" href="my-app/src/index.css">
 
-        footer {
-            background-color: #ffbad2; /* Dark pink footer */
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            width: 100%;
-            clear: both; /* Ensure footer clears all floats */
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #e56b6f; /* Pink links */
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-    <title>About Us</title>
+  <title>About Us</title>
 </head>
+
 <body>
-  <header>
-    <h1>About Us</h1>
-  </header>
+  <nav class="mobile-nav">
+    <div class="left-nav">
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div class="right-nav">
+      <a href="reminders.html" class="logout">Log out</a>
+    </div>
+  </nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="dashboard.html">Logs</a></li>
+      <li><a href="reading.html">Stats</a></li>
+      <div class="right">
+        <li><a href="reminders.html">Log out</a></li>
+        <li><a href="reminders.html">About us</a></li>
+      </div>
+    </ul>
+  </nav>
+
+
   <section>
-    <header>
-      <h2>Our Mission</h2>
-    </header>
-    <p>HealthHarmony is dedicated to revolutionizing the way individuals approach their menstrual health. We believe in providing accessible, inclusive, and personalized tools for everyone who menstruates, regardless of socioeconomic status or background.</p>
+    <div class="predictions">
+      <header>
+        <h1>About Us</h1>
+      </header>
+    </div>
   </section>
   <section>
+    <div class="info-grid">
+      <header>
+        <h2> Our mission</h2>
+      </header>
+      <img src="img/period.png" alt="Period icon">
+    </div>
+  </section>
+  <section class="values">
+    <header>
+      <h2>Our values</h2>
+    </header>
+    <div class="info-grid">
+      <div class="value-shape">
+        <h3>Inclusivity</h3>
+        <p>We prioritize inclusivity by designing our platform to cater to the diverse needs
+          and experiences of all individuals who menstruate.</p>
+      </div>
+      <img src="img/inclusivity.png" alt="Inclusivity icon">
+    </div>
+    <div class="info-grid">
+      <div class="value-shape">
+        <h3>Accessibility</h3>
+        <p> We believe that access to menstrual health resources should be universal, which
+          is why our platform is completely free to use, with no premium features or subscriptions.</p>
+      </div>
+      <img src="img/inclusivity.png" alt="Inclusivity icon">
+    </div>
+    <div class="info-grid">
+      <div class="value-shape">
+        <h3>Empowerment</h3>
+        <p> We empower our users by providing them with the tools and knowledge they need to take
+          control of their menstrual health journey and lead healthier, happier lives.</p>
+      </div>
+      <img src="img/inclusivity.png" alt="Inclusivity icon">
+    </div>
+  </section>
+
+  <section class="team">
     <header>
       <h2>Our Team</h2>
     </header>
-    <p>We are a passionate team of individuals committed to making a positive impact on menstrual health awareness and accessibility. Meet our dedicated team members:</p>
-    <ul>
-      <li><strong>Anjali Schatzer:</strong> <a href="mailto:anjals5@uw.edu">anjals5@uw.edu</a></li>
-      <li><strong>Yusra Abdullahi:</strong> <a href="mailto:yusraaa@uw.edu">yusraaa@uw.edu</a></li>
-      <li><strong>Hiba Abbas:</strong> <a href="mailto:hibaa3@uw.edu">hibaa3@uw.edu</a></li>
-      <li><strong>Amartya Chaube:</strong> <a href="mailto:achaub2@uw.edu">achaub2@uw.edu</a></li>
-    </ul>
+    <p>We are a passionate team of individuals committed to making a positive impact on menstrual
+      health awareness and accessibility. Meet our dedicated team members:</p>
+
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="img/anjali.jpg" alt="Anjali Schatzer">
+        <h3>Anjali Schatzer</h3>
+        <p><a href="mailto:anjals5@uw.edu">anjals5@uw.edu</a>
+      </div>
+      <div class="team-member">
+        <img src="img/yusra.jpg" alt="Yusra Abdullahi">
+        <h3>Yusra Abdullahi</h3>
+        <p><a href="mailto:yusraaa@uw.edu">yusraaa@uw.edu</a>
+      </div>
+      <div class="team-member">
+        <img src="img/hiba.jpg" alt="Hiba Abbas">
+        <h3>Hiba Abbas</h3>
+        <p><a href="mailto:hibaa3@uw.edu">hibaa3@uw.edu</a>
+      </div>
+      <div class="team-member">
+        <img src="img/amartya.jpg" alt="Amartya Chaube">
+        <h3>Amartya Chaube</h3>
+        <p><a href="mailto:achaub2@uw.edu">achaub2@uw.edu</a>
+      </div>
+    </div>
   </section>
-  <section>
-    <header>
-      <h2>Our Values</h2>
-    </header>
-    <p>At HealthHarmony, we are guided by the following values:</p>
-    <ul>
-      <li><strong>Inclusivity:</strong> We prioritize inclusivity by designing our platform to cater to the diverse needs and experiences of all individuals who menstruate.</li>
-      <li><strong>Accessibility:</strong> We believe that access to menstrual health resources should be universal, which is why our platform is completely free to use, with no premium features or subscriptions.</li>
-      <li><strong>Empowerment:</strong> We empower our users by providing them with the tools and knowledge they need to take control of their menstrual health journey and lead healthier, happier lives.</li>
-    </ul>
-  </section>
-  <section>
-    <header>
-      <h2>Contact Us</h2>
-    </header>
-    <p>Have questions, suggestions, or feedback? We'd love to hear from you! Feel free to reach out to us at <a href="mailto:contact@HealthHarmony.com<">contact@HealthHarmony.com</a>.</p>
-  </section>
-<footer>
-  <p>© 2024 Empowering Menstrual Health Tracking. All rights reserved. Group Members: Anjali Schatzer, Yusra Abdullahi, Hiba Abbas, Amartya Chaube</p>
-</footer>
+
+  <footer>
+    <p>© 2024 Empowering Menstrual Health Tracking. All rights reserved. Group Members: Anjali Schatzer, Yusra
+      Abdullahi, Hiba Abbas, Amartya Chaube</p>
+      <p>Have questions, suggestions, or feedback? We'd love to hear from you! Feel free to reach out to us at <a
+        href="mailto:contact@HealthHarmony.com<">contact@HealthHarmony.com</a>.</p>
+  </footer>
 </body>
+
 </html>
