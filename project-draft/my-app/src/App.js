@@ -1,24 +1,13 @@
-// import Calendar from './Calendar';
-import Reading from './Reading';
-import MoodCheck from './MoodCheck';
-import Nav from './Nav';
-import Predictions from './Predictions';
-import Container from './Container';
+import React from 'react';
+import Dashboard from './Dashboard';
 
 const App = () => {
-    return (
-      <div className="app">
-        <Nav />
+  return (
 
-        {/* <Cover/> */}
-        <Predictions />
-        <Container />
-        {/* <Calendar/> */}
-        {/* <Reading/> */}
-        <MoodCheck />
+    <div className="app">
+      <Dashboard />
+    </div>
+  );
+};
 
-      </div>
-    );
-  };
-
-  export default App;
+export default App;
