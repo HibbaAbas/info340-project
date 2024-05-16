@@ -16,11 +16,11 @@ const Nav = () => {
       <nav>
     <ul>
       <li><a href="index.html">Dashboard</a></li>
-      <li><a href="dashboard.html">Logs</a></li>
+      <li><a href="logs.html">Logs</a></li>
       <li><a href="reading.html">Stats</a></li>
       <div class="right">
-        <li><a href="reminders.html">Log out</a></li>
-        <li><a href="reminders.html">About us</a></li>  
+        <li><a href="cover.html">Log out</a></li>
+        <li><a href="aboutUs.html">About us</a></li>  
       </div>
     </ul>
   </nav>
