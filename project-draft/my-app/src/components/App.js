@@ -1,6 +1,7 @@
 import React from 'react';
-import Dashboard from './Dashboard';
-import Logs from './Logs';
+
+import { Dashboard } from './Dashboard';
+import { Logs } from './Logs';
 
 function App(props) {
   return (

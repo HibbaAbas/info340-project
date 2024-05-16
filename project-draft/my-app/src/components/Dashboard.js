@@ -6,7 +6,7 @@ import { Container } from './Container';
 import { MoodCheck } from './MoodCheck';
 import { Footer } from './Footer';
 
-const Dashboard = () => {
+export function Dashboard(props) {
     return (
         <div className="Dashboard">
             <Nav />
@@ -18,4 +18,3 @@ const Dashboard = () => {
     );
 }
 
-export default Dashboard;

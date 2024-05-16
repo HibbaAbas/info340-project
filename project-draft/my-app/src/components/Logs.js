@@ -3,7 +3,7 @@ import React from 'react';
 import { Nav } from './Nav';
 import { Footer } from './Footer';
 
-const LogContainer = () => {
+function LogContainer(props) {
     return (
         <section className="logs_container">
             <div className="logs_header">
@@ -17,7 +17,7 @@ const LogContainer = () => {
     );
 }
 
-const Logs = () => {
+export function Logs(props) {
     return (
         <div>
             <Nav />
@@ -27,4 +27,3 @@ const Logs = () => {
     );
 }
 
-export default Logs;
