@@ -18,6 +18,7 @@ export function Nav(props) {
     return element;
   })
 
+  // hide menu by default
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // show menu when hamburger is clicked

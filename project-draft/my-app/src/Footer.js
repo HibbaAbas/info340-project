@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = () => {
+export function Footer(props) {
     return (
         <footer>
             <p>Group Members: Anjali Schatzer, Yusra Abdullahi, Hiba Abbas, Amartya Chaube</p>
@@ -8,5 +8,3 @@ const Footer = () => {
         </footer>
     );
 }
-
-export default Footer;

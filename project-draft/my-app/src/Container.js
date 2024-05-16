@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { Calendar } from './Calendar';
-import Reminders from './Reminders';
+import { Reminders } from './Reminders';
 
 
 
-const TipSection = () => {
+function TipSection(props) {
   return (
     <section className="tip">
         <header>
@@ -25,7 +25,7 @@ const TipSection = () => {
   );
 };
 
-const ReminderAndTipSection = () => {
+function ReminderAndTipSection(props) {
   return (
     <div className="info-shape">
       <Reminders />
@@ -34,7 +34,7 @@ const ReminderAndTipSection = () => {
   );
 };
 
-const Sidebar = () => {
+function Sidebar(props) {
   return (
     <div className="sidebar">
       <ReminderAndTipSection />
@@ -42,7 +42,7 @@ const Sidebar = () => {
   );
 };
 
-const Container = () => {
+export function Container(props) {
   return (
     <section className="container">
       <Calendar />
@@ -50,5 +50,3 @@ const Container = () => {
     </section>
   );
 };
-
-export default Container;

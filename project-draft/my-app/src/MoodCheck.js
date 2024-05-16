@@ -1,22 +1,40 @@
 import React from 'react';
 
-const MoodCheck = () => (
-    <section className="mood_check">
-        <header>
-            <h3>How are you feeling today?</h3>
-    </header>
-    <div className="mood_top">
-        <img src="../img/a_emoji1.png" alt="happy face"/>
-        <img src="../img/a_emoji2.png" alt="side eye face"/>
-        <img src="../img/a_emoji3.png" alt="sobbing face"/>
-    </div>
-    <div className="mood_bottom">
-        <img src="../img/a_emoji4.png" alt="angry face"/>
-        <img src="../img/a_emoji5.png" alt="happy face"/>
-        <img src="../img/a_emoji6.png" alt="side eye face"/>
-    </div>
-</section>
-);
+export function MoodCheck(props) {
+    const MOOD_TOP = [
+        process.env.PUBLIC_URL + '/img/a_emoji1.png',
+        process.env.PUBLIC_URL + '/img/a_emoji2.png',
+        process.env.PUBLIC_URL + '/img/a_emoji3.png'
+    ];
 
+    const MOOD_BOTTOM = [
+        process.env.PUBLIC_URL + '/img/a_emoji4.png',
+        process.env.PUBLIC_URL + '/img/a_emoji5.png',
+        process.env.PUBLIC_URL + '/img/a_emoji6.png'
+    ];
 
-export default MoodCheck;
+    // image url is not unique, so need to use index as key!
+    const mood_top = MOOD_TOP.map((emoji, index) => {
+        const element = <img key={index} src={emoji} />
+        return element;
+    });
+    const mood_bottom = MOOD_BOTTOM.map((emoji, index) => {
+        const element = <img key={index} src={emoji} />
+        return element;
+    });
+
+    return (
+        <section className="mood_check">
+            <header>
+                <h3>How are you feeling today?</h3>
+            </header>
+            <div className="mood_top">
+                {mood_top}
+            </div>
+            <div className="mood_bottom">
+                {mood_bottom}
+            </div>
+        </section>
+    );
+}
+

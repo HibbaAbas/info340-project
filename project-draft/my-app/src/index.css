@@ -249,7 +249,7 @@ footer {
     }
 
     .predictions {
-        background-image: url('../img/prediction_bg.png');
+        background-image: url('../public/img/prediction_bg.png');
         background-size: cover;
         background-position: top center; 
     }
@@ -453,7 +453,7 @@ footer {
 
      /* Predictions Section */
      .predictions {
-        background-image: url('../img/prediction_bg.png');
+        background-image: url('../public/img/prediction_bg.png');
         background-size: cover;
         background-position: top center; 
     }

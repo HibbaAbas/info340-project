@@ -5,7 +5,7 @@ export function Calendar(props) {
         <>
         
             <div className="calendar-mobile">
-                <img src="img/calendar-icon.png" alt="calendar icon" />
+                <img src="/img/calendar-icon.png" alt="calendar icon" />
                 <div className="week-view">
                     <table cellspacing="15px" cellpadding="15" className="mobile-table">
                         <thead>
