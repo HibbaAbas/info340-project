@@ -222,6 +222,43 @@ footer {
     background-color: #F0D9DA;
 }
 
+/* About Us Page */
+header {
+    margin: 1em;
+    text-align: center;
+}
+
+.info-grid img {
+    display: none;
+}
+
+.info-grid {
+    margin-bottom: 2em;
+}
+.info p, .value-shape p, .team p{
+    margin: 1.5em;
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+.value-shape h3{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.team-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
 /* styling for medium screens */
 @media (min-width: 768px) {
     h3 {
@@ -230,6 +267,19 @@ footer {
         margin-bottom: .5rem;
         font-weight: 400;
         font-style: normal;
+    }
+
+    /* navbar */
+    .hamburger {
+        display: block; 
+    }
+
+    nav {
+        display: none; 
+    }
+
+    .mobile-nav {
+        display: flex; 
     }
 
     /* predictions */
@@ -378,19 +428,45 @@ footer {
     button {
         font-size: 1.3rem;
     }
-/*This is code that I added - Amartya: Start*/
-    .hamburger {
-        display: block; /* Ensure the hamburger menu is visible */
+
+    /* About Us Page */
+    .aboutTitle {
+        margin: 6em;
+        text-align: center;
     }
 
-    nav {
-        display: none; /* Initially hides the full navigation menu */
+    .info header {
+        margin-bottom: 1em;
     }
 
-    .mobile-nav {
-        display: flex; /* Keeps the mobile navigation bar visible */
+    .info p {
+        margin-top: 1em;
+        margin-right: 6em;
+        margin-left: 6em;
+        margin-bottom: 7em;
     }
-    /*This is code that I added - Amartya: End*/
+
+    .info-grid {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .info-grid img {
+        display: block;
+        margin-top: 1em;
+        margin-bottom: 3em;
+    }
+
+    .value-shape {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background-color: #F0D9DA; 
+    }
+
+    
+
 
 }
 
