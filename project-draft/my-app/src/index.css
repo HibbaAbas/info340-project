@@ -228,8 +228,11 @@ header {
     text-align: center;
 }
 
-.info-grid img {
-    display: none;
+.logo {
+    width: 100px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
 }
 
 .info-grid {
@@ -244,6 +247,14 @@ header {
 .value-shape h3{
     text-align: center;
     margin-bottom: .5rem;
+}
+
+.info-grid img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    width: 200px;
+    height: 200px;
 }
 
 .team-grid {
@@ -439,7 +450,12 @@ header {
         margin-bottom: 1em;
     }
 
-    .info p {
+    .logo {
+        width: 150px;
+        height: 320px;
+    }
+
+    .info p, .team p {
         margin-top: 1em;
         margin-right: 6em;
         margin-left: 6em;
@@ -456,6 +472,8 @@ header {
         display: block;
         margin-top: 1em;
         margin-bottom: 3em;
+        width: 300px;
+        height: 300px;
     }
 
     .value-shape {
@@ -463,6 +481,18 @@ header {
         height: 350px;
         border-radius: 50%;
         background-color: #F0D9DA; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 1.2em;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
     }
 
     
@@ -720,6 +750,58 @@ header {
 
     .log-grid img:first-child {
         margin-left: 10em;
+    }
+
+    /* About Us Page */
+    .aboutTitle {
+        margin: 10em;
+        text-align: center;
+    }
+    .info-grid-mission {
+        display: flex;
+        margin: 6em;
+        padding: 6em;
+    }
+
+    .info-grid-mission p {
+        margin: 5em;
+        font-size: 1rem;
+    }
+
+    .value-shape {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background-color: #F0D9DA; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 1.2em;
+    }
+
+    .info-grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 6em;
+    }
+
+    .info-grid img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .info-grid:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .team-grid {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        justify-content: center;
     }
 
 }

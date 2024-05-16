@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Nav } from './Nav';
 import { Footer } from './Footer';
+import { teamData, valuesData } from '../data';
 
 function AboutContainer(props) {
     return (
@@ -15,8 +16,8 @@ function AboutContainer(props) {
 
 function Mission(props) {
     return (
-        <div className="info-grid">
-            <img src="img/period.png" alt="Period icon" />
+        <div className="info-grid-mission">
+            <img className="logo" src="img/vulva_1.png" alt="Pink vulva icon" />
             <div className="info">
                 <header>
                     <h2> Our mission</h2>
@@ -35,30 +36,14 @@ function Values(props) {
             <header>
                 <h2>Our values</h2>
             </header>
-            <div className="info-grid">
-                <div className="value-shape">
-                    <h3>Inclusivity</h3>
-                    <p>We prioritize inclusivity by designing our platform to cater to the diverse needs
-                        and experiences of all individuals who menstruate.</p>
-                </div>
-                <img src="img/inclusivity.png" alt="Inclusivity icon" />
-            </div>
-            <div className="info-grid">
-                <div className="value-shape">
-                    <h3>Accessibility</h3>
-                    <p> We believe that access to menstrual health resources should be universal, which
-                        is why our platform is completely free to use, with no premium features or subscriptions.</p>
-                </div>
-                <img src="img/inclusivity.png" alt="Inclusivity icon" />
-            </div>
-            <div className="info-grid">
-                <div class="value-shape">
-                    <h3>Empowerment</h3>
-                    <p> We empower our users by providing them with the tools and knowledge they need to take
-                        control of their menstrual health journey and lead healthier, happier lives.</p>
-                </div>
-                <img src="img/inclusivity.png" alt="Inclusivity icon" />
-            </div>
+            {valuesData.map((value, index) =>
+                <div className="info-grid">
+                    <div className="value-shape">
+                        <h3>{value.title}</h3>
+                        <p>{value.description}</p>
+                    </div>
+                    <img src={value.imgSrc} alt={value.imgAlt} />
+                </div>)}
         </section>
     )
 }
@@ -66,35 +51,22 @@ function Values(props) {
 function Team(props) {
     return (
         <section className="team">
-    <header>
-      <h2>Our Team</h2>
-    </header>
-    <p>We are a passionate team of individuals committed to making a positive impact on menstrual
-      health awareness and accessibility. Meet our dedicated team members:</p>
+            <header>
+                <h2>Our Team</h2>
+            </header>
+            <p>We are a passionate team of individuals committed to making a positive impact on menstrual
+                health awareness and accessibility. Meet our dedicated team members:</p>
 
-    <div className="team-grid">
-      <div className="team-member">
-        <img src="img/anjali.jpg" alt="Anjali Schatzer"/>
-        <h3>Anjali Schatzer</h3>
-        <p><a href="mailto:anjals5@uw.edu">anjals5@uw.edu</a></p>
-      </div>
-      <div className="team-member">
-        <img src="img/yusra.jpg" alt="Yusra Abdullahi"/>
-        <h3>Yusra Abdullahi</h3>
-        <p><a href="mailto:yusraaa@uw.edu">yusraaa@uw.edu</a></p>
-      </div>
-      <div className="team-member">
-        <img src="img/hiba.jpg" alt="Hiba Abbas"/>
-        <h3>Hiba Abbas</h3>
-        <p><a href="mailto:hibaa3@uw.edu">hibaa3@uw.edu</a></p>
-      </div>
-      <div className="team-member">
-        <img src="img/amartya.jpg" alt="Amartya Chaube" />
-        <h3>Amartya Chaube</h3>
-        <p><a href="mailto:achaub2@uw.edu">achaub2@uw.edu</a></p>
-      </div>
-    </div>
-  </section>
+            <div className="team-grid">
+                {teamData.map((member, index) =>
+                    <div className="team-member">
+                        <img src={member.imgSrc} alt={member.imgAlt} />
+                        <h3>{member.name}</h3>
+                        <p><a href={"mailto:" + member.email}>{member.email}</a></p>
+                    </div>)
+                }
+            </div>
+        </section>
     )
 }
 
