@@ -3,6 +3,7 @@ import Nav from './Nav';
 import Predictions from './Predictions';
 import Container from './Container';
 import MoodCheck from './MoodCheck';
+import Footer from './Footer';
 
 const Dashboard = () => {
     return (
@@ -11,6 +12,7 @@ const Dashboard = () => {
             <Predictions />
             <Container />
             <MoodCheck />
+            <Footer />  
         </div>
     );
 }
