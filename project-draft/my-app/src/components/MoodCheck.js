@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export function MoodCheck(props) {
+
     const MOOD_TOP = [
         process.env.PUBLIC_URL + '/img/a_emoji1.png',
         process.env.PUBLIC_URL + '/img/a_emoji2.png',
@@ -17,6 +18,7 @@ export function MoodCheck(props) {
     const mood_top = MOOD_TOP.map((emoji, index) => {
         const element = <img key={index} src={emoji} />
         return element;
+
     });
     const mood_bottom = MOOD_BOTTOM.map((emoji, index) => {
         const element = <img key={index} src={emoji} />

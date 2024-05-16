@@ -7,9 +7,9 @@ import { About } from './About';
 function App(props) {
   return (
     <div>
-      {/*<Dashboard /> */}
+      <Dashboard /> 
       {/*<Logs /> */}
-      <About />
+      {/*<About /> */}
     </div>
   );
 };
