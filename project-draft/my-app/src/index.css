@@ -43,19 +43,10 @@ h3 {
     background-color: #F0D9DA;
 }
 
-.left-nav,
-.right-nav {
-    display: flex;
-    margin-top: .5em;
-}
-
 .hamburger {
     margin-left: 1em;
-}
-
-.logout {
-    margin-right: 1em;
-    margin-top: .25em;
+    margin-top: 0.5em;
+    font-size: 1.25rem;
 }
 
 .mobile-nav a {
@@ -65,6 +56,9 @@ h3 {
 
 nav {
     display: none;
+}
+nav.open {
+    display: block;
 }
 
 /* predictions */
@@ -158,9 +152,36 @@ table th {
     margin-left: 1.5em;
 }
 
+/* reminders */
 .reminder {
     border-bottom: 1px solid #C86B85;
 }
+.reminder ul{
+    list-style-type: none;
+    margin-bottom: 1em;
+}
+.reminder-item {
+    position: relative;
+    list-style: none;
+    margin-bottom: 8px; 
+  }
+
+  input[type="checkbox"] {
+    margin-left: 1em; 
+    margin-right: .5em;
+  }
+  
+  .delete-button {
+    position: absolute;
+    top: 0;
+    left: -1em;
+    visibility: hidden;
+    margin-left: 8px; 
+  }
+  
+  .reminder-item:hover .delete-button {
+    visibility: visible;
+  }
 
 /* mood check*/
 .mood_check header {
@@ -292,7 +313,6 @@ footer {
         flex-direction: row;
         justify-content: space-evenly;
         margin: 0 auto;
-        margin-top: 2em;
         border-top: 1px solid #C86B85;
     }
 
@@ -526,6 +546,7 @@ footer {
         padding-top: 1em;
         margin-right: 2em;
         border-top: 0px;
+        font-size: 1rem;
     }
 
     .sidebar header {
@@ -546,7 +567,10 @@ footer {
     input[type="checkbox"] {
         transform: scale(1.5);
         margin-right: 10px;
-        /* Adjust as needed */
+    }
+
+    .tips p {
+        font-size: 1.25rem;
     }
 
     button {

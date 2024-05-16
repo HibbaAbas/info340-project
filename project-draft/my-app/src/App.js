@@ -2,12 +2,11 @@ import React from 'react';
 import Dashboard from './Dashboard';
 import Logs from './Logs';
 
-const App = () => {
+function App(props) {
   return (
-
-    <div className="app">
-      {/*<Dashboard />*/}
-      <Logs /> 
+    <div>
+      <Dashboard />
+      {/*<Logs /> */}
     </div>
   );
 };

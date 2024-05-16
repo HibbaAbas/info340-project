@@ -1,32 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Nav = () => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+export function Nav(props) {
+
+  const PAGE_LIST = ['Dashboard', 'Logs', 'Stats'];
+  const PAGE_LIST_RIGHT = ['Log out', 'About us'];
+
+  const pageList = PAGE_LIST.map((pageNameString) => {
+    const element = <li key={pageNameString}> {pageNameString} </li>
+    return element;
+  })
+
+  const pageListRight = PAGE_LIST_RIGHT.map((pageNameString) => {
+    const element = <li key={pageNameString}> {pageNameString} </li>
+    return element;
+  })
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // show menu when hamburger is clicked
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
   return (
     <div>
       <nav className="mobile-nav">
-        <div className="left-nav">
-          <button className="hamburger" id="hamburger">
-            <i className="fas fa-bars"></i>
+          <button className="hamburger" id="hamburger" onClick={toggleMenu}>
+            <FontAwesomeIcon icon={faBars} />
           </button>
-        </div>
-        <div className="right-nav">
-          <a href="reminders.html" className="logout">Log out</a>
-        </div>
       </nav>
+
+      {isMenuOpen && (
+        <nav className={`mobile-nav ${isMenuOpen ? 'open' : ''}`}>
+          <ul>
+            {pageList}
+            {pageListRight}
+          </ul>
+        </nav>
+      )}
       <nav>
-    <ul>
-      <li><a href="index.html">Dashboard</a></li>
-      <li><a href="logs.html">Logs</a></li>
-      <li><a href="reading.html">Stats</a></li>
-      <div class="right">
-        <li><a href="cover.html">Log out</a></li>
-        <li><a href="aboutUs.html">About us</a></li>  
-      </div>
-    </ul>
-  </nav>
-
+        <ul>
+          {pageList}
+          <div class="right">
+            {pageListRight}
+          </div>
+        </ul>
+      </nav>
     </div>
-  );
-};
-
-export default Nav;
+  )
+}

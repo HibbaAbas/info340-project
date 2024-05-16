@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Calendar = () => {
+export function Calendar(props) {
     return (
         <>
         
@@ -110,4 +110,3 @@ const Calendar = () => {
             </>
     )
 }
-export default Calendar;
