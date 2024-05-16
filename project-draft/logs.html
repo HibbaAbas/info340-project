@@ -1,60 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <link rel="icon"
-      type="image/png"
-      href="img/icon.png">
+  <meta charset="UTF-8">
+  <meta name="author" content="Group 5">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/project.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <link rel="icon" type="image/png" href="img/icon.png">
+
+  <title>Logs</title>
 </head>
 
-<section>
-    <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="logs.html">Dashboard</a></li>
-          <li><a href="reading.html">Further Reading</a></li>
-          <li><a href="reminders.html">Reminders</a></li> <!-- Added reminders.html here -->
-        </ul>
-      </nav>
-</section>
-<section>
-    <header>
-      <h1>User Dashboard For Menstrual Health Tracking</h1x>
-    </header>
-  </section>
-  <section class="mood-trackers">
-    <h2>Hello! How are you feeling today?</h2>
-    <div class="mood options">
-      <a href="#" onclick="selectMood('happy')"><img class="mood-image" src="img/happyface.png" alt="Happy Face"></a>
-      <a href="#" onclick="selectMood('sad')"><img class="mood-image" src="img/sadface.png" alt="Sad Face"></a>
-      <a href="#" onclick="selectMood('angry')"><img class="mood-image" src="img/angryface.png" alt="Angry Face"></a>
-      <a href="#" onclick="selectMood('neutral')"><img class="mood-image" src="img/neutralface.png"
-          alt="Neutral Face"></a>
+<body>
+  <nav class="mobile-nav">
+    <div class="left-nav">
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div class="right-nav">
+      <a href="reminders.html" class="logout">Log out</a>
+    </div>
+  </nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="dashboard.html">Logs</a></li>
+      <li><a href="reading.html">Stats</a></li>
+      <div class="right">
+        <li><a href="reminders.html">Log out</a></li>
+        <li><a href="reminders.html">About us</a></li>
+      </div>
+    </ul>
+  </nav>
+
+
+  <section class="logs_container">
+    <div class="logs_header">
+      <p>Logs</p>
+      <p>Filter</p>
+    </div>
+    <div class="log-grid">
+      <img src="img/addLog.png" alt="create Log button">
     </div>
   </section>
 
-  <section class="cravings-tracker">
-    <h2>Today's Cravings</h2>
-    <p>Log Any Cravings You Have Today</p>
-    <form action="/submit-cravings" method="Post">
-      <div class="group-form">
-        <label for="input-cravings">What foods are you craving today?</label>
-        <input type="text" id="input-cravings" , name="cravings" , placeholder="Chocolate, Chips, etc.">
+</body>
 
-      </div>
-      <div class="group-form">
-        <label for="scale">How strong is your craving? (1-10)</label>
-        <input type="number" id="scale" name="scale" min="1" max="10">
+<footer>
+  <p>Group Members: Anjali Schatzer, Yusra Abdullahi, Hiba Abbas, Amartya Chaube</p>
+  <p>&copy; 2024</p>
+  
+</footer>
 
-      </div>
-      <div class="group-form">
-        <label for="time">What time of day do you experience these cravings</label>
-        <select id="time" name="time of day">
-          <option value="mornings">Mornings</option>
-          <option value="afternons">Afternoons</option>
-          <option value="evenings">Evenings</option>
-          <option value="nights">Nights</option>
-        </select>
-      </div>
-      <div class="group-form">
-        <button type="submit">Log Cravings</button>
-      </div>
-    </form>
-  </section>
+</html>
