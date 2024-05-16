@@ -17,6 +17,79 @@
   <link rel="icon" type="image/png" href="img/icon.png">
 
   <title>Logs</title>
+  <style>
+    /* Additional CSS for media queries */
+
+    body {
+      font-family: 'Inria Serif', serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    nav {
+      background-color: #f0d9da;
+      color: white;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .logs_container {
+      margin: 20px;
+    }
+
+    .logs_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .log-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .log-grid img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+    }
+
+    footer {
+      background-color: #f0d9da;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Media Queries */
+
+    @media only screen and (min-width: 769px) {
+      .logs_container {
+        width: 70%;
+        margin: 20px auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -53,12 +126,11 @@
     </div>
   </section>
 
-</body>
+  <footer>
+    <p>Group Members: Anjali Schatzer, Yusra Abdullahi, Hiba Abbas, Amartya Chaube</p>
+    <p>&copy; 2024</p>
+  </footer>
 
-<footer>
-  <p>Group Members: Anjali Schatzer, Yusra Abdullahi, Hiba Abbas, Amartya Chaube</p>
-  <p>&copy; 2024</p>
-  
-</footer>
+</body>
 
 </html>

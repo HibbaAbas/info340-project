@@ -9,13 +9,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffbad2;
+            background-color: #F0D9DA;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #ffbad2;
+            background-color: #F0D9DA;
             color: white;
             text-align: center;
             padding: 20px 0;
@@ -71,7 +71,7 @@
         }
 
         nav {
-            background-color: #d15eb8;
+            background-color: #ffbad2;
             overflow: hidden;
         }
 
@@ -95,7 +95,31 @@
         }
 
         nav ul li a:hover {
-            background-color: #ffbad2;
+            background-color: white;
+            color: #e56b6f;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 768px) {
+            /* Adjustments for smaller screens */
+            header {
+                padding: 10px 0;
+            }
+
+            nav ul li a {
+                padding: 10px;
+            }
+
+            .stats-images img {
+                max-width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 769px) {
+            /* Adjustments for tablets and larger screens */
+            .stats-images img {
+                max-width: 25%;
+            }
         }
     </style>
     <title>Statistics</title>
