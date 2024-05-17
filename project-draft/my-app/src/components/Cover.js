@@ -1,24 +1,25 @@
 import React from 'react';
 
 
-const Cover = () => (
-    <div className="cover">
+export function Cover(props) {
+    return (
+        <div className="cover">
             <img src="img/vulvas.png" alt="cover"/>
             <div className="log-in">
                 <div className="log-in-form">
+                    <h1>Welcome to Health Harmony!</h1>
                     <h3>Sign in</h3>
-                    <p>New user? <a href="/register">Create an account</a></p>
+                    <p>New User? Create an account</p>
                     <input type="text" placeholder="email address" required />
-                    <label htmlFor="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="password" required/>
                     <button type="submit">Log in</button>
-
                 </div>
-               
-            </div>
-                
-        
-    </div>
-);
 
-export default Cover;
+
+
+            </div>
+            
+        </div>
+    )
+}
+

@@ -215,6 +215,76 @@ button {
     margin-bottom: 2em;
     margin-left: 1.5em;
 }
+/* cover */
+.cover {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height: 100vh;
+    background-color: #F9ECEC;
+}
+
+.cover img {
+    max-width: 90%;
+    height:auto;
+}
+
+.log-in {
+    background-color:white;
+    flex-grow:1;
+    width:90%;
+    max-width:400px;
+    padding:20px;
+    box-shadow: 0 4px 8px rbga(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.log-in-form {
+    text-align:center;
+}
+
+.log-in-form h3 {
+    text-align:center;
+    margin-bottom:1rem;
+}
+
+.log-in-form p {
+    text-align:center;
+    margin-bottom: 1rem;
+    font-size: 0.8em;
+}
+
+
+.log-in-form input,
+.log-in-form button {
+    display:block;
+    width: calc(100%-20px);
+    margin: 10px auto;
+    padding: 10px;
+}
+
+
+.log-in-form input[type="text"],
+.log-in-form input[type="password"] {
+    background-color: #D9D9D9;
+    color: #767575;
+    border: none;
+    text-align:left;
+  
+}
+
+.log-in-form input[type="text"]::placeholder,
+.log-in-form input[type="password"]::placeholder {
+    color: #767575;
+    font-size: 1em;
+
+}
+
+.log-in-form button:hover {
+    background-color: #0056b3;
+}
+
 
 /* footer */
 footer {
@@ -290,6 +360,8 @@ header {
     align-items: center;
     margin-bottom: 1em;
 }
+
+
 
 /* styling for medium screens */
 @media (min-width: 768px) {
@@ -515,7 +587,37 @@ header {
         grid-template-columns: repeat(2, 1fr);
         gap: 2em;
     }
+/* cover */
 
+    .cover {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        align-items:center;
+        padding:20px;
+    }
+
+    .cover img {
+        flex-grow:1;
+        max-width:50%;
+        margin: 0 20px;
+        padding: 2%;
+    }
+
+    .log-in {
+        flex-grow: 1;
+        max-width: 50%;
+        margin: 0 20px;
+        padding: 2%;
+
+    }
+
+    .log-in-form input,
+    .log-in-form button {
+        width: 90%;
+        padding: 12px;
+        margin:10px auto;
+    }
 
 
 
@@ -824,5 +926,12 @@ header {
         margin: auto;
         justify-content: center;
     }
+     /* log in page */
+    .cover img {
+        max-width:40%;
+    }
 
+    .log-in {
+        max-width:40%;
+    }
 }
