@@ -9,11 +9,11 @@ import { Stats } from './Stats';
 function App(props) {
   return (
     <div>
-      {/*<Dashboard /> */}
+      <Dashboard /> 
       {/* <Logs />  */}
-      {/* <About /> */}
-       <Cover /> 
       {/* <Stats /> */}
+      {/* <About /> */}
+      {/*  <Cover /> */}
     </div>
   );
 };
