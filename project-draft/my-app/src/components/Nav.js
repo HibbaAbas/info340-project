@@ -15,6 +15,7 @@ export function Nav(props) {
     { name: 'About us', link: '/about' },
   ];
 
+  // create Link to's for each page for routing
   const renderList = (list) => {
     return list.map((page, index) => (
       <li key={index}>
