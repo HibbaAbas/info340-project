@@ -14,19 +14,16 @@ body {
 }
 
 h1 {
-    /* change to size for mobile */
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 h2 {
-    /* change to size for mobile */
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
 h3 {
-    /* change to size for mobile */
     font-size: 1.25rem;
     margin-bottom: .5rem;
     font-weight: 400;
@@ -37,7 +34,6 @@ h3 {
 .mobile-nav {
     display: flex;
     justify-content: space-between;
-    /* Change this */
     width: 100%;
     height: 50px;
     background-color: #F0D9DA;
@@ -57,6 +53,7 @@ h3 {
 nav {
     display: none;
 }
+
 nav.open {
     display: block;
 }
@@ -156,20 +153,22 @@ table th {
 .reminder {
     border-bottom: 1px solid #C86B85;
 }
+
 .reminder ul{
     list-style-type: none;
     margin-bottom: 1em;
 }
+
 .reminder-item {
     position: relative;
     list-style: none;
     margin-bottom: 8px;
-  }
+}
 
   input[type="checkbox"] {
     margin-left: 1em;
     margin-right: .5em;
-  }
+}
 
   .delete-button {
     position: absolute;
@@ -177,11 +176,11 @@ table th {
     left: -1em;
     visibility: hidden;
     margin-left: 8px;
-  }
+}
 
   .reminder-item:hover .delete-button {
     visibility: visible;
-  }
+}
 
 /* mood check*/
 .mood_check header {
@@ -215,6 +214,7 @@ button {
     margin-bottom: 2em;
     margin-left: 1.5em;
 }
+
 /* cover */
 .cover {
     display:flex;
@@ -264,7 +264,6 @@ button {
     padding: 10px;
 }
 
-
 .log-in-form input[type="text"],
 .log-in-form input[type="password"] {
     background-color: #D9D9D9;
@@ -285,32 +284,68 @@ button {
     background-color: #0056b3;
 }
 
-
 /* footer */
 footer {
-    margin-top: 2em;
+    margin-top: 8em;
     background-color: #F0D9DA;
 }
 
 /* Logs Page */
+.logs-container {
+    display: flex;
+    justify-content: center;
+}
+.logs_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 3em; 
+    margin-bottom: 1em;
+    padding: 0 4em;
+    border-bottom: 1px solid black;
+    width: 80%;
+}
+
+.log-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    width: 80%; 
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+    margin: auto;
+}
+
+.log-grid img {
+    width: 150px; 
+    height: 200px; 
+}
+
+.filter-dropdown {
+    width: 180px; 
+}
+
 .filter-bttn {
     color: black;
     margin-bottom: 0;
+}
+
+.filter-container {
+    position: relative; 
 }
 
 .filter-dropdown {
     display: flex;
     flex-direction: column;
     background-color: #F0D9DA;
-    position: absolute;
-    width: 200px;
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    width: 180px;
     padding: 12px;
     z-index: 1;
-}
-
-.filter-container {
-    display: flex;
-    flex-direction: column;
 }
 
 /* About Us Page */
@@ -360,8 +395,6 @@ header {
     align-items: center;
     margin-bottom: 1em;
 }
-
-
 
 /* styling for medium screens */
 @media (min-width: 768px) {
@@ -533,6 +566,23 @@ header {
         font-size: 1.3rem;
     }
 
+    /* Logs Page */
+    .log-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        width: 80%; 
+        justify-content: center;
+        align-items: center;
+        gap: 1.2em;
+        margin: auto;
+        width: 80%;
+    }
+
+    .filter-bttn {
+        font-size: 1rem;
+    }
+
+
     /* About Us Page */
     .aboutTitle {
         margin: 6em;
@@ -587,8 +637,8 @@ header {
         grid-template-columns: repeat(2, 1fr);
         gap: 2em;
     }
-/* cover */
 
+/* cover */
     .cover {
         display: flex;
         flex-direction: row;
@@ -609,7 +659,6 @@ header {
         max-width: 50%;
         margin: 0 20px;
         padding: 2%;
-
     }
 
     .log-in-form input,
@@ -618,9 +667,6 @@ header {
         padding: 12px;
         margin:10px auto;
     }
-
-
-
 }
 
 
@@ -817,7 +863,6 @@ header {
     }
 
      /* Mood check */
-    /* I am having trouble with aligning this section to the left */
     .mood_check {
         display: flex;
         flex-direction: column;
@@ -858,21 +903,38 @@ header {
         margin-right: auto;
         margin-bottom: 1em;
         align-items: center;
-        justify-content: center;
-    }
-
-    .logs_header p:first-child {
-        margin-right: 60em;
+        justify-content: space-between;
     }
 
     .log-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
+        margin: auto;
+        width: 80%;
     }
 
-    .log-grid img:first-child {
-        margin-left: 10em;
+    .log-grid img {
+        width: 175px;
+        height: 250px;
+        margin-bottom: 1.2em;
+    }
+
+  
+    .filter-container {
+        position: relative; 
+    }
+    
+    .filter-dropdown {
+        display: flex;
+        flex-direction: column;
+        background-color: #F0D9DA;
+        position: absolute; 
+        top: 100%; 
+        left: 0;
+        width: 220px;
+        padding: 12px;
+        z-index: 1;
     }
 
     /* About Us Page */
@@ -926,6 +988,7 @@ header {
         margin: auto;
         justify-content: center;
     }
+
      /* log in page */
     .cover img {
         max-width:40%;
@@ -934,4 +997,5 @@ header {
     .log-in {
         max-width:40%;
     }
+   
 }

@@ -9,9 +9,9 @@ function App(props) {
   return (
     <div>
       {/*<Dashboard /> */}
-       {/* <Logs />  */}
+      <Logs />  
       {/* <About /> */}
-      <Cover />
+      {/* <Cover /> */}
     </div>
   );
 };
