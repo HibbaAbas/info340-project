@@ -1,5 +1,6 @@
 /* font imports */
 @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -154,7 +155,7 @@ table th {
     border-bottom: 1px solid #C86B85;
 }
 
-.reminder ul{
+.reminder ul {
     list-style-type: none;
     margin-bottom: 1em;
 }
@@ -165,12 +166,12 @@ table th {
     margin-bottom: 8px;
 }
 
-  input[type="checkbox"] {
+input[type="checkbox"] {
     margin-left: 1em;
     margin-right: .5em;
 }
 
-  .delete-button {
+.delete-button {
     position: absolute;
     top: 0;
     left: -1em;
@@ -178,7 +179,7 @@ table th {
     margin-left: 8px;
 }
 
-  .reminder-item:hover .delete-button {
+.reminder-item:hover .delete-button {
     visibility: visible;
 }
 
@@ -193,7 +194,9 @@ table th {
     width: 70px;
     margin-bottom: 1em;
 }
-.mood_top, .mood_bottom {
+
+.mood_top,
+.mood_bottom {
     display: flex;
     justify-content: space-around;
 }
@@ -217,40 +220,40 @@ button {
 
 /* cover */
 .cover {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
     background-color: #F9ECEC;
 }
 
 .cover img {
     max-width: 90%;
-    height:auto;
+    height: auto;
 }
 
 .log-in {
-    background-color:white;
-    flex-grow:1;
-    width:90%;
-    max-width:400px;
-    padding:20px;
-    box-shadow: 0 4px 8px rbga(0,0,0,0.1);
+    background-color: white;
+    flex-grow: 1;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rbga(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
 .log-in-form {
-    text-align:center;
+    text-align: center;
 }
 
 .log-in-form h3 {
-    text-align:center;
-    margin-bottom:1rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .log-in-form p {
-    text-align:center;
+    text-align: center;
     margin-bottom: 1rem;
     font-size: 0.8em;
 }
@@ -258,7 +261,7 @@ button {
 
 .log-in-form input,
 .log-in-form button {
-    display:block;
+    display: block;
     width: calc(100%-20px);
     margin: 10px auto;
     padding: 10px;
@@ -269,8 +272,8 @@ button {
     background-color: #D9D9D9;
     color: #767575;
     border: none;
-    text-align:left;
-  
+    text-align: left;
+
 }
 
 .log-in-form input[type="text"]::placeholder,
@@ -295,13 +298,14 @@ footer {
     display: flex;
     justify-content: center;
 }
+
 .logs_header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    margin-top: 3em; 
+    margin-top: 3em;
     margin-bottom: 1em;
     padding: 0 4em;
     border-bottom: 1px solid black;
@@ -310,8 +314,8 @@ footer {
 
 .log-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    width: 80%; 
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
     justify-content: center;
     align-items: center;
     gap: 1.2em;
@@ -319,12 +323,12 @@ footer {
 }
 
 .log-grid img {
-    width: 150px; 
-    height: 200px; 
+    width: 150px;
+    height: 200px;
 }
 
 .filter-dropdown {
-    width: 180px; 
+    width: 180px;
 }
 
 .filter-bttn {
@@ -333,15 +337,15 @@ footer {
 }
 
 .filter-container {
-    position: relative; 
+    position: relative;
 }
 
 .filter-dropdown {
     display: flex;
     flex-direction: column;
     background-color: #F0D9DA;
-    position: absolute; 
-    top: 100%; 
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 180px;
     padding: 12px;
@@ -364,13 +368,16 @@ header {
 .info-grid {
     margin-bottom: 2em;
 }
-.info p, .value-shape p, .team p{
+
+.info p,
+.value-shape p,
+.team p {
     margin: 1.5em;
     font-size: 1rem;
     margin-bottom: 1em;
 }
 
-.value-shape h3{
+.value-shape h3 {
     text-align: center;
     margin-bottom: .5rem;
 }
@@ -569,8 +576,8 @@ header {
     /* Logs Page */
     .log-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); 
-        width: 80%; 
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
         justify-content: center;
         align-items: center;
         gap: 1.2em;
@@ -598,7 +605,8 @@ header {
         height: 320px;
     }
 
-    .info p, .team p {
+    .info p,
+    .team p {
         margin-top: 1em;
         margin-right: 6em;
         margin-left: 6em;
@@ -611,6 +619,7 @@ header {
         text-align: center;
         align-items: center;
     }
+
     .info-grid img {
         display: block;
         margin-top: 1em;
@@ -638,18 +647,18 @@ header {
         gap: 2em;
     }
 
-/* cover */
+    /* cover */
     .cover {
         display: flex;
         flex-direction: row;
-        justify-content:space-evenly;
-        align-items:center;
-        padding:20px;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
     }
 
     .cover img {
-        flex-grow:1;
-        max-width:50%;
+        flex-grow: 1;
+        max-width: 50%;
         margin: 0 20px;
         padding: 2%;
     }
@@ -665,7 +674,71 @@ header {
     .log-in-form button {
         width: 90%;
         padding: 12px;
-        margin:10px auto;
+        margin: 10px auto;
+    }
+
+    /* Stats Page */
+    .stats-year {
+        padding: 20px;
+    }
+
+    .year-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-toggle {
+        margin-top: 1.5em;
+        background-color: #F0D9DA;
+        color: #333;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: #F0D9DA;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-item {
+        padding: 12px 16px;
+        cursor: pointer;
+    }
+
+    .dropdown-item:hover {
+        background-color: #ddd;
+    }
+
+    .year-dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .stats-year {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .graph {
+        height: 400px;
+        width: 900px;
+    }
+
+    .stats-graphs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
     }
 }
 
@@ -726,8 +799,8 @@ header {
         font-size: 1.2rem;
     }
 
-     /* Predictions Section */
-     .predictions {
+    /* Predictions Section */
+    .predictions {
         background-image: url('../public/img/prediction_bg.png');
         background-size: cover;
         background-position: top center;
@@ -766,7 +839,7 @@ header {
         font-size: 1.5rem;
     }
 
-     /* Calendar */
+    /* Calendar */
     /* index styling for large screens */
     .container {
         display: flex;
@@ -862,7 +935,7 @@ header {
         margin-right: 5px;
     }
 
-     /* Mood check */
+    /* Mood check */
     .mood_check {
         display: flex;
         flex-direction: column;
@@ -920,17 +993,17 @@ header {
         margin-bottom: 1.2em;
     }
 
-  
+
     .filter-container {
-        position: relative; 
+        position: relative;
     }
-    
+
     .filter-dropdown {
         display: flex;
         flex-direction: column;
         background-color: #F0D9DA;
-        position: absolute; 
-        top: 100%; 
+        position: absolute;
+        top: 100%;
         left: 0;
         width: 220px;
         padding: 12px;
@@ -942,6 +1015,7 @@ header {
         margin: 10em;
         text-align: center;
     }
+
     .info-grid-mission {
         display: flex;
         margin: 6em;
@@ -989,13 +1063,12 @@ header {
         justify-content: center;
     }
 
-     /* log in page */
+    /* log in page */
     .cover img {
-        max-width:40%;
+        max-width: 40%;
     }
 
     .log-in {
-        max-width:40%;
+        max-width: 40%;
     }
-   
 }
