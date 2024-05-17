@@ -7,8 +7,8 @@ import { About } from './About';
 function App(props) {
   return (
     <div>
-      <Dashboard /> 
-      {/* <Logs /> */}
+      {/*<Dashboard /> */}
+       <Logs /> 
       {/* <About /> */}
     </div>
   );

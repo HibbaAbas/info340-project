@@ -222,6 +222,27 @@ footer {
     background-color: #F0D9DA;
 }
 
+/* Logs Page */
+.filter-bttn {
+    color: black;
+    margin-bottom: 0;
+}
+
+.filter-dropdown {
+    display: flex;
+    flex-direction: column;
+    background-color: #F0D9DA;
+    position: absolute;
+    width: 200px;
+    padding: 12px;
+    z-index: 1;
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+}
+
 /* About Us Page */
 header {
     margin: 1em;
