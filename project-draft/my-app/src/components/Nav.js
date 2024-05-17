@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export function Nav(props) {
 
-  const PAGE_LIST = ['Dashboard', 'Logs', 'Stats'];
-  const PAGE_LIST_RIGHT = ['Log out', 'About us'];
+  const PAGE_LIST = [
+    { name: 'Dashboard', link: '/' },
+    { name: 'Logs', link: '/logs' },
+    { name: 'Stats', link: '/stats' },
+  ];
+  const PAGE_LIST_RIGHT = [
+    { name: 'Log out', link: '/login' },
+    { name: 'About us', link: '/about' },
+  ];
 
-  const pageList = PAGE_LIST.map((pageNameString) => {
-    const element = <li key={pageNameString}> {pageNameString} </li>
-    return element;
-  })
+  const renderList = (list) => {
+    return list.map((page, index) => (
+      <li key={index}>
+        <Link to={page.link} className="link">{page.name}</Link>
+      </li>
+    ));
+  };
 
   const pageListRight = PAGE_LIST_RIGHT.map((pageNameString) => {
     const element = <li key={pageNameString}> {pageNameString} </li>
@@ -37,16 +47,16 @@ export function Nav(props) {
       {isMenuOpen && (
         <nav className={`mobile-nav ${isMenuOpen ? 'open' : ''}`}>
           <ul>
-            {pageList}
-            {pageListRight}
+            {renderList(PAGE_LIST)}
+            {renderList(PAGE_LIST_RIGHT)}
           </ul>
         </nav>
       )}
       <nav>
         <ul>
-          {pageList}
+        {renderList(PAGE_LIST)}
           <div class="right">
-            {pageListRight}
+          {renderList(PAGE_LIST_RIGHT)}
           </div>
         </ul>
       </nav>

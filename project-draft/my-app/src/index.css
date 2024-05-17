@@ -59,6 +59,10 @@ nav.open {
     display: block;
 }
 
+.link {
+    font-size: 1rem;
+}
+
 /* predictions */
 .predictions {
     display: flex;
