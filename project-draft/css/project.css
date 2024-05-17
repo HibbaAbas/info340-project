@@ -215,9 +215,89 @@ button {
     margin-left: 1.5em;
 }
 
+
+/* cover */
+.cover {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height: 100vh;
+    background-color: #F9ECEC;
+}
+
+.cover img {
+    max-width: 90%;
+    height:auto;
+}
+
+.log-in {
+    background-color:white;
+    flex-grow:1;
+    width:90%;
+    max-width:400px;
+    padding:20px;
+    box-shadow: 0 4px 8px rbga(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.log-in-form {
+    text-align:center;
+}
+
+.log-in-form h3 {
+    text-align:center;
+    margin-bottom:1rem;
+}
+
+.log-in-form p {
+    text-align:center;
+    margin-bottom: 1rem;
+    font-size: 0.8em;
+}
+
+
+.log-in-form input,
+.log-in-form button {
+    display:block;
+    width: calc(100%-20px);
+    margin: 10px auto;
+    padding: 10px;
+}
+
+
+.log-in-form input[type="text"],
+.log-in-form input[type="password"] {
+    background-color: #D9D9D9;
+    color: #767575;
+    border: none;
+    text-align:left;
+    /* height: 40px;
+    width: 80%;
+    margin: auto;
+    margin-top: 3em; */
+}
+
+.log-in-form input[type="text"]::placeholder,
+.log-in-form input[type="password"]::placeholder {
+    color: #767575;
+    font-size: 1em;
+    /* position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 1em;
+    width: 100%; */
+}
+
+.log-in-form button:hover {
+    background-color: #0056b3;
+}
+
+
 footer {
     margin-top: 2em;
     background-color: #F0D9DA;
+
 }
 
 /* styling for medium screens */
@@ -377,6 +457,40 @@ footer {
     button {
         font-size: 1.3rem;
     }
+
+    /* cover */
+
+    .cover {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        align-items:center;
+        padding:20px;
+    }
+
+    .cover img {
+        flex-grow:1;
+        max-width:50%;
+        margin: 0 20px;
+        padding: 2%;
+    }
+
+    .log-in {
+        flex-grow: 1;
+        max-width: 50%;
+        margin: 0 20px;
+        padding: 2%;
+
+    }
+
+    .log-in-form input,
+    .log-in-form button {
+        width: 90%;
+        padding: 12px;
+        margin:10px auto;
+    }
+
+
 /*This is code that I added - Amartya: Start*/
     .hamburger {
         display: block; /* Ensure the hamburger menu is visible */
@@ -582,7 +696,7 @@ footer {
     }
 
     /* Mood check */
-    /* I am having trouble with aligning this section to the left */
+ 
     .mood_check {
         display: flex;
         flex-direction: column;
@@ -641,82 +755,12 @@ footer {
     }
 
     /* log in page */
-    .cover {
-        display: flex;
-    }
-
     .cover img {
-        width: auto;
-        height: 100vh;
+        max-width:40%;
     }
 
     .log-in {
-        background-color: white;
-        margin-left: 1.5em;
-        flex-grow: 1;
-        height: 100vh;
-    }
-
-    .log-in-form {
-        width: 400px;
-        height: 500px;
-        background-color: #F6F5F5;
-        margin: auto;
-        margin-top: 8em;
-        padding: 20px;
-    }
-
-    .log-in-form h3 {
-        text-align: left;
-        padding: 0;
-        margin-left: 1.2em;
-    }
-
-    .log-in-form p {
-        text-align: left;
-        padding: 0;
-        margin-left: 1.2em;
-
-        color: #000000;
-        font-size: .8em;
-    }
-
-    .log-in-form input,
-    .log-in-form button {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .log-in-form button {
-        padding: 10px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-    .log-in-form button:hover {
-        background-color: #0056b3;
-    }
-
-    .log-in-form input[type="text"],
-    .log-in-form input[type="password"] {
-        background-color: #D9D9D9;
-        color: #767575;
-        border: none;
-        height: 40px;
-        width: 80%;
-        margin: auto;
-        margin-top: 3em;
-    }
-
-    .log-in-form input[type="text"]::placeholder,
-    .log-in-form input[type="password"]::placeholder {
-        position: absolute;
-        top: 20px;
-        left: 10px;
-        font-size: 1em;
+        max-width:40%;
     }
     /*This is code that I added - Amartya: Start*/
 

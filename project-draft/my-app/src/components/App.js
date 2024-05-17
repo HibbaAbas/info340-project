@@ -8,8 +8,8 @@ function App(props) {
   return (
     <div>
       <Dashboard /> 
-      {/*<Logs /> */}
-      {/*<About /> */}
+      {/* <Logs /> */}
+      {/* <About /> */}
     </div>
   );
 };
