@@ -218,7 +218,7 @@ button {
     margin-left: 1.5em;
 }
 
-/* cover */
+/* Cover Page */
 .cover {
     display: flex;
     flex-direction: column;
@@ -229,15 +229,15 @@ button {
 }
 
 .cover img {
-    max-width: 90%;
-    height: auto;
+    display: none;
 }
 
 .log-in {
     background-color: white;
     flex-grow: 1;
     width: 90%;
-    max-width: 400px;
+    max-width: 300px;
+    max-height: 400px;
     padding: 20px;
     box-shadow: 0 4px 8px rbga(0, 0, 0, 0.1);
     margin-top: 20px;
@@ -247,17 +247,24 @@ button {
     text-align: center;
 }
 
+.log-in-form h1 {
+    margin-bottom: 0.2em;
+}
+.log-in-form h2 {
+    margin-top: 0;
+}
 .log-in-form h3 {
-    text-align: center;
-    margin-bottom: 1rem;
+    text-align: left;
+    margin-left: 1em;
+    margin-bottom: .2rem;
 }
 
 .log-in-form p {
-    text-align: center;
+    text-align: left;
+    margin-left: 1em;
     margin-bottom: 1rem;
     font-size: 0.8em;
 }
-
 
 .log-in-form input,
 .log-in-form button {
@@ -710,7 +717,7 @@ header {
         gap: 2em;
     }
 
-    /* cover */
+    /* Cover Page */
     .cover {
         display: flex;
         flex-direction: row;
@@ -720,6 +727,7 @@ header {
     }
 
     .cover img {
+        display: block;
         flex-grow: 1;
         max-width: 50%;
         margin: 0 20px;
@@ -779,7 +787,7 @@ header {
         display: none;
     }
 
-    /* Navbar */
+    /* navbar */
     nav {
         display: block;
         background-color: #F0D9DA;
@@ -812,7 +820,7 @@ header {
         font-size: 1.2rem;
     }
 
-    /* Predictions Section */
+    /* predictions section */
     .predictions {
         background-image: url('../public/img/prediction_bg.png');
         background-size: cover;
@@ -852,7 +860,7 @@ header {
         font-size: 1.5rem;
     }
 
-    /* Calendar */
+    /* calendar */
     /* index styling for large screens */
     .container {
         display: flex;
@@ -898,7 +906,7 @@ header {
         background-color: #F0D9DA;
     }
 
-    /* Sidebar */
+    /* sidebar */
     .sidebar {
         width: 30%;
         flex-direction: column;
@@ -948,7 +956,7 @@ header {
         margin-right: 5px;
     }
 
-    /* Mood check */
+    /* mood check */
     .mood_check {
         display: flex;
         flex-direction: column;
@@ -1081,12 +1089,22 @@ header {
         width: 900px;
     }
 
-    /* log in page */
+    /* Cover Page */
+    .cover {
+        display: flex;
+    }
+
     .cover img {
-        max-width: 40%;
+        width: auto;
+        height: 100vh;
     }
 
     .log-in {
         max-width: 40%;
     }
+
+    .log-in-form {
+        height: 800px;
+    }
+
 }

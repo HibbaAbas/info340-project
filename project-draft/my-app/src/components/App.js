@@ -12,8 +12,8 @@ function App(props) {
       {/*<Dashboard /> */}
       {/* <Logs />  */}
       {/* <About /> */}
-      {/* <Cover /> */}
-      <Stats /> 
+       <Cover /> 
+      {/* <Stats /> */}
     </div>
   );
 };
