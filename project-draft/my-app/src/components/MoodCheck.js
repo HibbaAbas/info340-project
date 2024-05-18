@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export function MoodCheck(props) {
 
@@ -16,12 +16,12 @@ export function MoodCheck(props) {
 
     // image url is not unique, so need to use index as key!
     const mood_top = MOOD_TOP.map((emoji, index) => {
-        const element = <img key={index} src={emoji} />
+        const element = <img key={index} src={emoji} alt="emoji"/>
         return element;
 
     });
     const mood_bottom = MOOD_BOTTOM.map((emoji, index) => {
-        const element = <img key={index} src={emoji} />
+        const element = <img key={index} src={emoji} alt="emoji"/>
         return element;
     });
 

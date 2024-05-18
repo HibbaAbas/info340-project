@@ -24,11 +24,6 @@ export function Nav(props) {
     ));
   };
 
-  const pageListRight = PAGE_LIST_RIGHT.map((pageNameString) => {
-    const element = <li key={pageNameString}> {pageNameString} </li>
-    return element;
-  })
-
   // hide menu by default
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
