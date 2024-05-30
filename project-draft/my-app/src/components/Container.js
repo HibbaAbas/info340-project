@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Calendar } from './Calendar';
+import { MyCalendar } from './Calendar';
 import { Reminders } from './Reminders';
 
 
@@ -45,7 +45,7 @@ function Sidebar(props) {
 export function Container(props) {
   return (
     <section className="container">
-      <Calendar />
+      <MyCalendar />
       <Sidebar />
     </section>
   );
