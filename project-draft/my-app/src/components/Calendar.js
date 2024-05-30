@@ -1,10 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Calendar, momentLocalizer} from 'react-big-calendar';
+import moment from 'moment';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+
 import dayjs from 'dayjs';
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import {DateCalendar} from '@mui/x-date-pickers/DateCalendar';
 
+// const localizer = momentLocalizer(moment);
 
+// export function MyCalendar() {
+//     const[view,setView] = useState('month');
+//     const [events,setEvents] = useState([]);
+
+//     return (
+//         <div className="calendar-container">
+//             <Calendar 
+//                 localizer={localizer}
+//                 events={events}
+//                 startAccessor="start"
+//                 endAccessor="end"
+//                 defaultView={view}
+//                 views={['month', 'week']}
+//                 onView={(newView) => setView(newView)}
+//                 style={{height:'100vh'}}
+//             />
+//         </div>
+//     );
+// }
 
 export function MyCalendar() {
     const [value,setValue] = React.useState(dayjs());
