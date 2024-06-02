@@ -12,7 +12,7 @@ function TipSection(props) {
           <h3>Tips</h3>
         </header>
         <div className="info-shape">
-          <div class="tips">
+          <div className="tips">
             <p><span className="star">&#9733;</span><a
                 href="https://www.calm.com/blog/anxiety-before-period#:~:text=PMS%20anxiety%20typically%20begins%20in,subsides%20once%20your%20period%20starts."
                 target="_blank">How to handle period anxiety</a></p>

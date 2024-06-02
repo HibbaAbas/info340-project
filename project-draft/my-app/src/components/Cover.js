@@ -1,26 +1,31 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {getAuth, EmailAuthProvider, GoogleAuthProvider} from 'firebase/auth';
-
-import {useAuthState} from 'react-firebase-hooks/auth';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
 
-// const firebaseUIConfig = {
-//     signInOptions: [
-//         GoogleAuthProvider.PROVIDER_ID,
-//         {provider: EmailAuthProvider.PROVIDER_ID, requiredDisplayName:true},
 
-//     ],
-//     signInFlow: 'popup',
-//     credentialHelper: 'none',
-//     callbacks: {
-//         signInSuccessWithAuthResult: () => false,
-//     },
-// };
+const firebaseUIConfig = {
+    signInOptions: [
+        {
+            provider:EmailAuthProvider.PROVIDER_ID,
+            requireDisplayName: true,
+        },
+        {
+            provider:GoogleAuthProvider.PROVIDER_ID,
+        },
+    ],
+    signInFlow:'popup',
+    callbacks: {
+        signInSuccessWithAuthResult: () => false,
+
+    },
+    credentialHelper:'none',
+
+};
 
 
-export function Cover(props) {
-    // const auth = getAuth();
+export function Cover() {
+    const auth = getAuth();
     // const [user, loading, error] = useAuthState(auth);
 
     // useEffect(() => {
@@ -37,18 +42,7 @@ export function Cover(props) {
                 <div className="log-in-form">
                     <h1>Health Harmony</h1>
                     <h2>Empowering your period</h2>
-                    {/* <h3>{user ? `Welcome, ${user.displayName}` : 'Log in'}</h3>
-                    {loading && <p>Loading...</p>}
-                    {error && <p>Error: {error.message}</p>}
-                    {!user && !loading && (
-                        <> */}
-                        {/* <StyledFirebaseAuth uiConfig={firebaseUIConfig} firebaseAuth={auth}/> */}
-                        <p>New User? Create an Account</p>
-                        {/* </>
-                    )} */}
-                    {/* {user && ( */}
-                        {/* <button onClick={() => auth.signOut()}>Log Out</button> */}
-                    {/* )} */}
+                    <StyledFirebaseAuth uiConfig={firebaseUIConfig} firebaseAuth={auth} />
                    
                 </div>
             </div> 

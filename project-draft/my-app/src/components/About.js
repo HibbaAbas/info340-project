@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Nav } from './Nav';
+import {Nav} from './Nav';
 import { Footer } from './Footer';
 import { teamData, valuesData } from '../data';
 
@@ -73,7 +73,7 @@ function Team(props) {
 export function About(props) {
     return (
         <div>
-            <Nav />
+            {/* <Nav /> */}
             <AboutContainer />
             <Mission />
             <Values />

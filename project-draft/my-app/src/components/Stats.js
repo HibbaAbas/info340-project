@@ -46,7 +46,7 @@ function StatsGraphs(props) {
 export function Stats(props) {
     return (
         <div>
-            <Nav />
+            {/* <Nav /> */}
             <StatsHeader />
             <StatsGraphs />
             <Footer />

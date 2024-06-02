@@ -243,7 +243,7 @@ button {
     max-width: 300px;
     max-height: 400px;
     padding: 20px;
-    box-shadow: 0 4px 8px rbga(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
@@ -297,6 +297,37 @@ button {
 .log-in-form button:hover {
     background-color: #0056b3;
 }
+/* firebase auth UI */
+.firebaseui-container {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+.firebaseui-idp-button {
+    width:90% ;
+    margin: 10px 0 ;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.firebaseui-idp-button .firebaseui-idp-icon-wrapper {
+    margin-right:10px ;
+}
+
+
+.firebaseui-idp-text.firebaseui-idp-text-long {
+    flex-grow:1 ;
+    text-align:center ;
+}
+
+.firebaseui-idp-text {
+    font-size:1rem ;
+
+}
+
 
 /* footer */
 footer {
@@ -758,7 +789,21 @@ header {
         padding: 12px;
         margin: 10px auto;
     }
+    /* firebase */
 
+    .firebaseui-container {
+        width:100%;
+    }
+
+    .firebaseui-idp-button {
+        width:80% ;
+        margin:15px 0 ;
+
+    }
+
+    .firebaseui-idp-text {
+        font-size:1.2rem ;
+    }
     /* Stats Page */
     .graph {
         height: 350px;
@@ -793,7 +838,33 @@ header {
         font-weight: 400;
         font-style: normal;
     }
+    .firebaseui-container {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
 
+    }
+
+    .firebaseui-idp-button{
+        width:90% ;
+        margin:10px 0 ;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+
+    }
+    .firebaseui-idp-button .firebaseui-idp-icon-wrapper{
+        margin-right:10px ;
+    }
+
+    .firebaseui-idp-text.firebaseui-idp-text-long{
+        flex-grow:1 ;
+        text-align:center ;
+
+    }
+    .firebaseui-idp-text {
+        font-size:1rem ;
+    }
     .mobile-nav {
         display: none;
     }
@@ -1101,6 +1172,7 @@ header {
     }
 
     /* Cover Page */
+
     .cover {
         display: flex;
     }
@@ -1109,6 +1181,7 @@ header {
         width: auto;
         height: 100vh;
     }
+    
 
     .log-in {
         max-width: 40%;
@@ -1117,5 +1190,7 @@ header {
     .log-in-form {
         height: 800px;
     }
+
+
 
 }

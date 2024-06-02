@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Nav } from './Nav';
+import {Nav } from './Nav';
 import { Footer } from './Footer';
 
 function LogContainer(props) {
@@ -26,7 +26,7 @@ function LogContainer(props) {
                     )}
                 </div>
             </div>
-            <div class="log-grid">
+            <div className="log-grid">
                 <img src="../img/addLog.png" alt="create Log button" />
                 <img src="../img/log_1.png" alt="log 1" />
                 <img src="../img/log_2.png" alt="log 2" />
@@ -43,7 +43,7 @@ function LogContainer(props) {
 export function Logs(props) {
     return (
         <div>
-            <Nav />
+            <Nav/>
             <LogContainer />
             <Footer />
         </div>
