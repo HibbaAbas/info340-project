@@ -13,7 +13,6 @@ function App({ auth }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Monitor authentication state changes
     const unregisterAuthObserver = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
       if (user) {

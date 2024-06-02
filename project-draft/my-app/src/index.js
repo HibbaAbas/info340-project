@@ -1,21 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import 'firebaseui/dist/firebaseui.css';
 import App from './components/App';
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-
-ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
-  document.getElementById('root')
-);
-
-
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -39,5 +31,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
-
