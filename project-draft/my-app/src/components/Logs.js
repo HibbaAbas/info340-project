@@ -9,7 +9,8 @@ import angryFace from '../img copy/angryface.png';
 import neutralFace from '../img copy/neutralface.png';
 import addLog from '../img copy/addLog copy.png';
 import log1Copy from '../img copy/log1 copy.png';
-import log2Copy from '../img copy/log_2 copy.png';
+import log1 from '../img copy/log_1 copy.png';
+import log2 from '../img copy/log_2 copy.png';
 
 function LogContainer(props) {
     const [isFilterOpen, setFilterOpen] = useState(false);
@@ -59,8 +60,8 @@ function LogContainer(props) {
                 <div className="add-log-button" onClick={handleFormToggle}>
                     <img src={addLog} alt="create Log button" />
                 </div>
-                <img src={log1Copy} alt="log 1" />
-                <img src={log2Copy} alt="log 2" />
+                <img src={log1} alt="log 1" />
+                <img src={log2} alt="log 2" />
                 <img src={log1Copy} alt="log 3" />
                 <img src={log1Copy} alt="log 4" />
                 <img src={log1Copy} alt="log 5" />
@@ -133,7 +134,7 @@ function LogContainer(props) {
                         <li>
                             Notes:
                             <label>
-                                <textarea name="notes" onChange={handleInputChange} style={{ height: '60px', width: '100%' }} placeholder="Started new medication, allergies, pregnancy, etc." required></textarea>
+                                <textarea name="notes" onChange={handleInputChange} style={{ height: '60px', width: '100%' }} placeholder="Started new medication, allergies, etc." required></textarea>
                             </label>
                         </li>
                     </ul>
