@@ -7,12 +7,14 @@ import happyFace from '../img copy/happyface.png';
 import sadFace from '../img copy/sadface.png';
 import angryFace from '../img copy/angryface.png';
 import neutralFace from '../img copy/neutralface.png';
-
+import addLog from '../img copy/addLog copy.png';
+import log1Copy from '../img copy/log1 copy.png';
+import log2Copy from '../img copy/log_2 copy.png';
 
 function LogContainer(props) {
     const [isFilterOpen, setFilterOpen] = useState(false);
     const [isFormOpen, setFormOpen] = useState(false);
-    const [logData, setLogData] = useState({}); // state to store form data
+    const [logData, setLogData] = useState({});
 
     const handleFilterToggle = () => {
         setFilterOpen(!isFilterOpen);
@@ -55,13 +57,13 @@ function LogContainer(props) {
             </div>
             <div className="log-grid">
                 <div className="add-log-button" onClick={handleFormToggle}>
-                    <img src="../img copy/addLog.png" alt="create Log button" />
+                    <img src={addLog} alt="create Log button" />
                 </div>
-                <img src="../img copy/log_1.png" alt="log 1" />
-                <img src="../img copy/log_2.png" alt="log 2" />
-                <img src="../img copy/log_2.png" alt="log 2" />
-                <img src="../img copy/log_2.png" alt="log 2" />
-                <img src="../img copy/log_2.png" alt="log 2" />
+                <img src={log1Copy} alt="log 1" />
+                <img src={log2Copy} alt="log 2" />
+                <img src={log1Copy} alt="log 3" />
+                <img src={log1Copy} alt="log 4" />
+                <img src={log1Copy} alt="log 5" />
             </div>
             <Model show={isFormOpen} handleClose={handleFormToggle}>
                 <h3>Add New Log</h3>
@@ -81,7 +83,7 @@ function LogContainer(props) {
                         </li>
                         <li style={{ display: 'flex', alignItems: 'center' }}>
                             <span style={{ marginRight: '10px' }}>Pain Level:</span>
-                            <div className="circle-button-container">
+                            <div className="circle-button-container" style={{ display: 'flex', gap: '10px' }}>
                                 {[1, 2, 3, 4, 5].map((level) => (
                                     <label key={level} className={`circle-button ${logData.painLevel === level ? 'selected' : ''}`}>
                                         <input type="radio" name="painLevel" value={level} onChange={handleInputChange} />
@@ -113,11 +115,11 @@ function LogContainer(props) {
                         </li>
                         <li style={{ display: 'flex', alignItems: 'center' }}>
                             <span style={{ marginRight: '10px' }}>Flow:</span>
-                            <div className="flow-button-container">
+                            <div className="flow-button-container" style={{ display: 'flex', gap: '10px' }}>
                                 {[1, 2, 3, 4, 5].map((level) => (
                                     <label key={level} className={`flow-button ${logData.flowLevel === level ? 'selected' : ''}`}>
                                         <input type="radio" name="flowLevel" value={level} onChange={handleInputChange} />
-                                        <span style={{ fontSize: '24px' }}>💧</span> {/* Replace with image if available */}
+                                        {'💧'.repeat(level)} {/* Increasing number of drops for each level */}
                                     </label>
                                 ))}
                             </div>
@@ -131,7 +133,7 @@ function LogContainer(props) {
                         <li>
                             Notes:
                             <label>
-                                <textarea name="notes" onChange={handleInputChange} style={{ height: '60px', width: '100%' }} placeholder="Started new medication, allergies, etc." required></textarea>
+                                <textarea name="notes" onChange={handleInputChange} style={{ height: '60px', width: '100%' }} placeholder="Started new medication, allergies, pregnancy, etc." required></textarea>
                             </label>
                         </li>
                     </ul>
