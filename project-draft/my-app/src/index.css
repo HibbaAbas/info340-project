@@ -124,21 +124,6 @@ nav.open {
 
 }
 
-/* .fc-button:hover {
-    background-color:#C86B85;
-    color:white;
-}
-
-.fc button:active {
-    background-color: #B25668;
-    border-color: #B25668;
-
-}
-
-
-.fc .fc-today-button {
-    font-weight:bold;
-} */
 .fc-daygrid-day-number {
     color:#C86B85;
 }
@@ -254,19 +239,26 @@ button {
 
 .log-in {
     background-color: white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
     flex-grow: 1;
     width: 90%;
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 500px;
     padding: 20px;
+    margin:20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 
 }
 
 .log-in-form {
+    display:flex;
     text-align: center;
     width:100%;
+    flex-direction:column;
+    align-items:center;
 
 }
 
@@ -291,10 +283,10 @@ button {
 
 .log-in-form input,
 .log-in-form button {
-    display: block;
+    /* display: block; */
     width: 100%;
     margin: 10px auto;
-    padding: 10px;
+    padding: 12px;
 }
 
 .log-in-form input[type="text"],
@@ -789,7 +781,6 @@ header {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      align-items: center;
       padding: 20px;
     }
 
@@ -797,20 +788,16 @@ header {
       max-width: 50%;
       margin: 0 20px;
       padding: 2%;
+      display:block;
     }
 
     .log-in {
-      max-width:70%; /* Decrease the width of the login section */
-      margin: 0 20px;
-      padding: 30px;
+      max-width:450px;
+      padding:50px;
+      /* min-height:50px; */
     }
 
-    .log-in-form input,
-    .log-in-form button {
-      width: 100%;
-      padding: 12px;
-      margin: 10px auto;
-    }
+ 
 
     /* Firebase UI */
     .firebaseui-container {
@@ -1205,14 +1192,6 @@ header {
         display: block;
         width: auto;
         height: 100vh;
-    }
-
-    .log-in {
-        max-width: 100%;
-    }
-
-    .log-in-form {
-        height: 800px;
     }
 
 
