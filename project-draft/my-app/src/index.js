@@ -4,9 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import 'firebaseui/dist/firebaseui.css';
 import App from './components/App';
-// import '@fullcalendar/common/main.css'; // Common styles
-// import '@fullcalendar/daygrid/main.css'; // Styles specific to DayGrid
-// import '@fullcalendar/timegrid/main.css'; // Styles specific to TimeGrid
+
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
