@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
+// import '@fullcalendar/common/main.css'; // Common styles
+// import '@fullcalendar/daygrid/main.css'; // Styles specific to DayGrid
+// import '@fullcalendar/timegrid/main.css'; // Styles specific to TimeGrid
+
+
 import 'firebaseui/dist/firebaseui.css';
 import App from './components/App';
 
