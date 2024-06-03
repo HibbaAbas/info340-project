@@ -117,7 +117,11 @@ nav.open {
 .fc-button {
     background-color: #F0D9DA;
     color: #C86B85;
-    border:none;
+    border: 1px solid #C86B85;
+    padding:8px 12px;
+    font-size: 1rem;
+    cursor:pointer;
+
 }
 
 .fc-button:hover {
@@ -125,8 +129,26 @@ nav.open {
     color:white;
 }
 
+.fc button:active {
+    background-color: #B25668;
+    border-color: #B25668;
+
+}
+
+
+.fc .fc-today-button {
+    font-weight:bold;
+}
 .fc-daygrid-day-number {
     color:#C86B85;
+}
+
+.fc .fc-button-disabled {
+    background-color:#ececec;
+    color: #ccc;
+    cursor: default;
+    border-color: #ccc;
+
 }
 
 .fc .fc-day-today {
