@@ -256,15 +256,18 @@ button {
     background-color: white;
     flex-grow: 1;
     width: 90%;
-    max-width: 300px;
+    max-width: 400px;
     max-height: 400px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+
+
 }
 
 .log-in-form {
     text-align: center;
+    width:100%;
+
 }
 
 .log-in-form h1 {
@@ -289,7 +292,7 @@ button {
 .log-in-form input,
 .log-in-form button {
     display: block;
-    width: calc(100%-20px);
+    width: 100%;
     margin: 10px auto;
     padding: 10px;
 }
@@ -797,9 +800,9 @@ header {
     }
 
     .log-in {
-      max-width: 40%; /* Decrease the width of the login section */
+      max-width:70%; /* Decrease the width of the login section */
       margin: 0 20px;
-      padding: 2%;
+      padding: 30px;
     }
 
     .log-in-form input,
@@ -1205,7 +1208,7 @@ header {
     }
 
     .log-in {
-        max-width: 40%;
+        max-width: 100%;
     }
 
     .log-in-form {
