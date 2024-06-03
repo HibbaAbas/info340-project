@@ -374,7 +374,21 @@ footer {
     gap: 1.2em;
     margin: auto;
 }
+.save-button:hover {
+    background-color: #FFD1DC;
+}
 
+
+.add-log-button img {
+    transition: transform 0.3s, opacity 0.3s;
+
+
+}
+
+.add-log-button:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
 .log-grid img {
     width: 150px;
     height: 200px;
