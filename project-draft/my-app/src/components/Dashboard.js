@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-import {Nav } from './Nav';
+import { Nav } from './Nav';
 import { Predictions } from './Predictions';
 import { Container } from './Container';
 import { MoodCheck } from './MoodCheck';
 import { Footer } from './Footer';
 
 export function Dashboard(props) {
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        const auth = getAuth();
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            setUser(user);
+        });
+
+        // Cleanup function to unsubscribe from the observer
+        return () => unsubscribe();
+    }, []);
+
     return (
         <div className="Dashboard">
-            {/* <Nav /> */}
+            <Nav /> 
             <Predictions />
             <Container />
             <MoodCheck />
@@ -17,4 +30,3 @@ export function Dashboard(props) {
         </div>
     );
 }
-

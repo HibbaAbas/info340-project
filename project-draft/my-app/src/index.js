@@ -1,20 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
+import 'firebaseui/dist/firebaseui.css';
+import App from './components/App';
 // import '@fullcalendar/common/main.css'; // Common styles
 // import '@fullcalendar/daygrid/main.css'; // Styles specific to DayGrid
 // import '@fullcalendar/timegrid/main.css'; // Styles specific to TimeGrid
-
-
-import 'firebaseui/dist/firebaseui.css';
-import App from './components/App';
-
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
-// Your web app's Firebase configuration
+// Our web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBw3NOPo_sTjzdoflksL1MEkSPJ0S2PtRc",
   authDomain: "info340group-5.firebaseapp.com",
