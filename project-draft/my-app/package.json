@@ -29,6 +29,7 @@
     "react-firebaseui": "https://gitpkg.now.sh/gvillenave/firebaseui-web-react/dist",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
+    "styled-components": "^6.1.11",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

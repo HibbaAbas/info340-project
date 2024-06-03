@@ -9,7 +9,7 @@ import { Stats } from './Stats';
 
 function App(props) {
   return (
-    <Routes> 
+    <Routes>
       <Route path="/" element={<Dashboard />} />
       <Route path="/logs" element={<Logs />} />
       <Route path="/stats" element={<Stats />} />
