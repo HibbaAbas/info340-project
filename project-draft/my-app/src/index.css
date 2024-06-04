@@ -264,6 +264,7 @@ button {
 
 .log-in-form h1 {
     margin-bottom: 0.2em;
+  
 }
 .log-in-form h2 {
     margin-top: 0;
@@ -808,11 +809,20 @@ header {
     .log-in {
       max-width:450px;
       padding:50px;
-      /* min-height:50px; */
+
     }
 
- 
-
+    .log-in-form h1 {
+        margin-bottom:1rem;
+    }
+    .log-in-form h2 {
+        margin-bottom: 0.8rem;
+    }
+    .log-in-form h3 {
+        text-align:left;
+        margin-left:1em;
+        margin-bottom: 1rem;
+    }
     /* Firebase UI */
     .firebaseui-container {
       width: 100%;
