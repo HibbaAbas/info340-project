@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-
 import { Nav } from './Nav';
 import { Predictions } from './Predictions';
 import { Container } from './Container';
-import { MoodCheck } from './MoodCheck';
 import { Footer } from './Footer';
 
 export function Dashboard(props) {
@@ -25,7 +23,6 @@ export function Dashboard(props) {
             <Nav /> 
             <Predictions />
             <Container />
-            <MoodCheck />
             <Footer />  
         </div>
     );

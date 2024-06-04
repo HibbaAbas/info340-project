@@ -73,7 +73,7 @@ function Team(props) {
 export function About(props) {
     return (
         <div>
-            {/* <Nav /> */}
+            {<Nav /> }
             <AboutContainer />
             <Mission />
             <Values />
