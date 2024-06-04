@@ -154,7 +154,7 @@ function LogContainer(props) {
                 {[1, 2, 3, 4, 5].map((level) => (
                   <label key={level} className={`circle-button ${logData.painLevel === level ? 'selected' : ''}`}>
                     <input type="radio" name="painLevel" value={level} checked={logData.painLevel === level} onChange={handleInputChange} />
-                    {level}
+                    <span>{level}</span>
                   </label>
                 ))}
               </div>
@@ -163,20 +163,20 @@ function LogContainer(props) {
               Mood:
               <div className="mood-images" style={{ display: 'flex', gap: '10px' }}>
                 <label>
-                  <img src={happyFace} alt="Happy" style={{ width: '30px', height: '30px' }} />
                   <input type="radio" name="mood" value="happy" checked={logData.mood === 'happy'} onChange={handleInputChange} />
+                  <img src={happyFace} alt="Happy" style={{ width: '30px', height: '30px' }} />
                 </label>
                 <label>
-                  <img src={sadFace} alt="Sad" style={{ width: '30px', height: '30px' }} />
                   <input type="radio" name="mood" value="sad" checked={logData.mood === 'sad'} onChange={handleInputChange} />
+                  <img src={sadFace} alt="Sad" style={{ width: '30px', height: '30px' }} />
                 </label>
                 <label>
-                  <img src={angryFace} alt="Angry" style={{ width: '30px', height: '30px' }} />
                   <input type="radio" name="mood" value="angry" checked={logData.mood === 'angry'} onChange={handleInputChange} />
+                  <img src={angryFace} alt="Angry" style={{ width: '30px', height: '30px' }} />
                 </label>
                 <label>
-                  <img src={neutralFace} alt="Neutral" style={{ width: '30px', height: '30px' }} />
                   <input type="radio" name="mood" value="neutral" checked={logData.mood === 'neutral'} onChange={handleInputChange} />
+                  <img src={neutralFace} alt="Neutral" style={{ width: '30px', height: '30px' }} />
                 </label>
               </div>
             </li>
@@ -186,7 +186,7 @@ function LogContainer(props) {
                 {[1, 2, 3, 4, 5].map((level) => (
                   <label key={level} className={`flow-button ${logData.flowLevel === level ? 'selected' : ''}`}>
                     <input type="radio" name="flowLevel" value={level} checked={logData.flowLevel === level} onChange={handleInputChange} />
-                    {'💧'.repeat(level)} {/* Increasing number of drops for each level */}
+                    <span>{'💧'.repeat(level)}</span>
                   </label>
                 ))}
               </div>
