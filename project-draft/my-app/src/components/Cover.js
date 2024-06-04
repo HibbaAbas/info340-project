@@ -10,22 +10,6 @@ export function Cover(props) {
   const [isSignUp, setIsSignUp] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() =>  {
-    const removeAuthObserver=onAuthStateChanged(auth, (firebaseUser) => {
-      if(firebaseUser) {
-        console.log('Logged in', firebaseUser.displayName);
-
-        // CHECK IF NEEDED!!!!!
-        navigate('/dashbard');
-      }else{
-        console.log('Logged out');
-
-        navigate('/login');
-      }
-    });
-    return () => removeAuthObserver();
-  }, [navigate]);
-
 
   const handleSignIn = async (e) => {
     e.preventDefault();
