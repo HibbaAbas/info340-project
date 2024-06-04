@@ -16,7 +16,7 @@ export function Cover(props) {
         console.log('Logged in', firebaseUser.displayName);
 
         // CHECK IF NEEDED!!!!!
-        // navigate('/dashbard');
+        navigate('/dashbard');
       }else{
         console.log('Logged out');
 
