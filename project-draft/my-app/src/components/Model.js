@@ -1,7 +1,7 @@
 import React from 'react';
 import '../index.css';
 
-const Model = ({ show, handleClose, children }) => {
+export function Model({ show, handleClose, children }) {
   if (!show) {
     return null;
   }

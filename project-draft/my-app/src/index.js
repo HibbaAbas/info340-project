@@ -4,9 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import 'firebaseui/dist/firebaseui.css';
 import App from './components/App';
-
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+
 
 // Our web app's Firebase configuration
 const firebaseConfig = {

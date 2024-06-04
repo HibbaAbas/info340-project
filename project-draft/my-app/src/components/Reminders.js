@@ -18,9 +18,6 @@ export function Reminders(props) {
     }
   };
 
-  // i could not use props here because these functions need index
-  // to be passed down to them as it is not defined within the functions
-
   // function to check off a reminder
   // toggles the checked property of the reminder at the given index
   // by creating a new array with the reminder checked property toggled
