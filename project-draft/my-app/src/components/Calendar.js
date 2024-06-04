@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -11,11 +11,11 @@ const MyCalendar = () => {
     useEffect(() => {
         const handleResize = () => {
             const calendarApi = calendarRef.current?.getApi();
-            if(!calendarApi) return;
+            if (!calendarApi) return;
             calendarApi.updateSize();
-            if(window.innerWidth < 768) {
+            if (window.innerWidth < 768) {
                 calendarApi.changeView('timeGridWeek');
-            }else{
+            } else {
                 calendarApi.changeView('dayGridMonth');
             }
             if (calendarApi) {
@@ -36,16 +36,16 @@ const MyCalendar = () => {
                 plugins={[dayGridPlugin, timeGridPlugin]}
                 initialView='dayGridMonth'
                 headToolbar={{
-                    left:'prev,next today',
+                    left: 'prev,next today',
                     center: 'title',
                     right: 'dayGridMonth, timeGridWeek, timeGridDay'
-            }}
-            editable={true}
-            selectable={true}
-        />
+                }}
+                editable={true}
+                selectable={true}
+            />
 
         </div>
-        
+
     );
 };
 
