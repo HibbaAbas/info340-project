@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 
 export function Cover(props) {
   const auth = getAuth();
@@ -9,6 +9,23 @@ export function Cover(props) {
   const [error, setError] = useState(null);
   const [isSignUp, setIsSignUp] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() =>  {
+    const removeAuthObserver=onAuthStateChanged(auth, (firebaseUser) => {
+      if(firebaseUser) {
+        console.log('Logged in', firebaseUser.displayName);
+
+        // CHECK IF NEEDED!!!!!
+        // navigate('/dashbard');
+      }else{
+        console.log('Logged out');
+
+        navigate('/login');
+      }
+    });
+    return () => removeAuthObserver();
+  }, [navigate]);
+
 
   const handleSignIn = async (e) => {
     e.preventDefault();
